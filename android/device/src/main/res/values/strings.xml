@@ -1,0 +1,19 @@
+<resources>
+    <string name="share_device">Share device</string>
+    <string name="share_with_apps">Link a Matter-enabled app</string>
+    <string name="share_device_method_hint">Choose the method you want to use to invite or link others</string>
+    <string name="using_qr_code">Share with QR code</string>
+    <string name="using_pairing_code">Using pairing code</string>
+    <string name="share_device_cancel">Cancel</string>
+    <string name="share_with_pairing_code_hint">Copy this code, open a Matter-enabled app, and enter the code when prompted.  This code will expire in 3 minutes</string>
+    <string name="share_with_pairing_code_title">Share with pairing code</string>
+    <string name="share_with_qr_code_hint">To allow others to control this device, they need to open a Matter-enabled app on their phone or tablet and scan this QR code. This code will expire in 3 minutes</string>
+    <string name="share_with_qr_code_title">Share with QR code</string>
+    <string name="copy_pairing_code">Copy code</string>
+    <string name="pairing_code_example">0003–4568–910</string>
+    <string name="share_device_error_title">Oops, something went wrong</string>
+    <string name="share_device_error_hint">Something went wrong while trying to generate the device share payload. Please make sure that your device is online</string>
+    <string name="share_device_in_progress_title">Configuring device</string>
+    <string name="share_device_in_progress_hint">Please wait while we set up the device for sharing. This will only take a couple of minutes.</string>
+    <string name="wifi">Wifi</string>
+</resources>

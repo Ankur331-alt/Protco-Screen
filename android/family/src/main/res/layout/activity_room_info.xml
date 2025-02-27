@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dpp_80">
+
+        <include
+            android:id="@+id/roomNameView"
+            layout="@layout/item_family_info" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/room_support_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dpp_40"
+                    android:background="@drawable/shape_bg_item_10" />
+
+                <LinearLayout
+                    android:id="@+id/ll_not_support"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dpp_40"
+                    android:background="@drawable/shape_bg_item_10"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_not_room"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dpp_80"
+                        android:layout_marginTop="@dimen/dpp_40"
+                        android:layout_marginEnd="@dimen/dpp_80"
+                        android:layout_marginBottom="@dimen/dpp_48"
+                        android:text="@string/rino_family_equipment"
+                        android:textColor="@color/cen_connect_step_selected_color"
+                        android:textSize="@dimen/spp_28" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/room_not_support_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/tvSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dpp_20"
+            android:background="@drawable/shape_cen_dialog_confirm"
+            android:paddingStart="@dimen/dpp_220"
+            android:paddingTop="@dimen/dpp_24"
+            android:paddingEnd="@dimen/dpp_220"
+            android:paddingBottom="@dimen/dpp_24"
+            android:text="@string/xpopup_save"
+            android:textColor="@color/cen_connect_step_selected_color"
+            android:textSize="@dimen/spp_24" />
+    </LinearLayout>
+</LinearLayout>

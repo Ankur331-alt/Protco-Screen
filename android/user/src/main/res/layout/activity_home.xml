@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/status_place_view" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llLeft"
+                    android:layout_width="@dimen/dpp_236"
+                    android:layout_height="match_parent"
+                    android:background="@color/cen_common_item_bg_color"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dpp_64">
+
+                    <TextView
+                        android:id="@+id/tvFamilyName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dpp_30"
+                        android:background="@drawable/icon_home_family_bg"
+                        android:drawableRight="@drawable/ic_arrow_for_down"
+                        android:drawablePadding="@dimen/dpp_5"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:layout_marginStart="@dimen/dpp_10"
+                        android:layout_marginEnd="@dimen/dpp_10"
+                        android:padding="@dimen/dpp_18"
+                        android:textColor="@color/cen_common_item_bg_color"
+                        android:textSize="@dimen/spp_16" />
+
+                    <TextView
+                        android:id="@+id/tv_text_commands"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dpp_20"
+                        android:drawablePadding="@dimen/dpp_5"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:layout_marginStart="@dimen/dpp_10"
+                        android:layout_marginEnd="@dimen/dpp_10"
+                        android:padding="@dimen/dpp_18"
+                        android:textSize="@dimen/spp_16" />
+
+                    <me.majiajie.pagerbottomtabstrip.PageNavigationView
+                        android:id="@+id/pageNavigation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="8dp" />
+                </LinearLayout>
+
+                <com.smart.rinoiot.common.view.CustomViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_listening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:visibility="gone"
+            android:src="@drawable/icon_microphone_on_round"
+            android:backgroundTint="@color/cen_connect_shape_selected_end_gradient"
+            app:rippleColor="@color/cen_connect_shape_selected_start_gradient"
+            app:fabSize="normal"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

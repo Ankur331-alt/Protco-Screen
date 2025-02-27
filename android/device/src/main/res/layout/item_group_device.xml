@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/dpp_40"
+    android:paddingTop="@dimen/dpp_40">
+
+    <ImageView
+        android:id="@+id/iv_type"
+        android:layout_width="@dimen/dpp_88"
+        android:layout_height="@dimen/dpp_128"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dpp_40"
+        android:paddingStart="@dimen/dpp_20"
+        android:paddingTop="@dimen/dpp_20"
+        android:paddingEnd="@dimen/dpp_20"
+        android:paddingBottom="@dimen/dpp_60"
+        android:src="@drawable/icon_group_remove" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/dpp_40"
+            android:paddingBottom="@dimen/dpp_40">
+
+            <ImageView
+                android:id="@+id/iv_device_icon"
+                android:layout_width="@dimen/dpp_88"
+                android:layout_height="@dimen/dpp_88"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dpp_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDeviceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/ivRight"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="@color/c_4A4A4A"
+                    android:textSize="@dimen/spp_15" />
+
+                <TextView
+                    android:id="@+id/tvDeviceRoom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/ivRight"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="@color/c_A5A5A5"
+                    android:textSize="@dimen/spp_12" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dpp_1"
+            android:visibility="gone"
+            android:background="@color/f_f0f0f0" />
+    </LinearLayout>
+</LinearLayout>

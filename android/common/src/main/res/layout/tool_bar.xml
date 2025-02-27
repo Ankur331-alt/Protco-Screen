@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cen_main_theme_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/status_place_view" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/dpp_200"
+            android:layout_height="@dimen/dpp_100"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dpp_60"
+            android:padding="@dimen/dpp_5"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tvLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dpp_20"
+            android:paddingStart="@dimen/dpp_40"
+            android:paddingTop="@dimen/dpp_10"
+            android:paddingEnd="@dimen/dpp_20"
+            android:paddingBottom="@dimen/dpp_10"
+            android:text="@string/rino_common_cancel"
+            android:textColor="@color/f_454545"
+            android:textSize="@dimen/spp_34"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpp_20"
+            android:layout_toRightOf="@id/ivBack"
+            android:ellipsize="end"
+            android:lines="1"
+            android:layout_centerVertical="true"
+            android:textColor="@color/cen_connect_step_selected_color"
+            android:textSize="@dimen/spp_28"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dpp_20"
+            android:paddingStart="@dimen/dpp_20"
+            android:paddingTop="@dimen/dpp_10"
+            android:paddingEnd="@dimen/dpp_20"
+            android:paddingBottom="@dimen/dpp_10"
+            android:textSize="@dimen/spp_34"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivRight"
+            android:layout_width="@dimen/dpp_70"
+            android:layout_height="@dimen/dpp_70"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dpp_30"
+            android:padding="@dimen/dpp_10"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="@dimen/dpp_100"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/ivBack"-->
+    <!--            android:layout_width="@dimen/dpp_80"-->
+    <!--            android:layout_height="@dimen/dpp_80"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginLeft="@dimen/dpp_10"-->
+    <!--            android:padding="@dimen/dpp_20"-->
+    <!--            app:srcCompat="@drawable/icon_back" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tvTitle"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_centerInParent="true"-->
+    <!--            android:layout_marginLeft="@dimen/dpp_140"-->
+    <!--            android:layout_marginRight="@dimen/dpp_140"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:ellipsize="end"-->
+    <!--            android:gravity="center"-->
+    <!--            android:maxLines="1"-->
+    <!--            android:textColor="@color/titleColor"-->
+    <!--            android:textSize="@dimen/spp_16" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/ivRight"-->
+    <!--            android:layout_width="@dimen/dpp_60"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_alignParentEnd="true"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginRight="@dimen/dpp_30"-->
+    <!--            android:visibility="gone" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tvRight"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_alignParentEnd="true"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:layout_marginRight="@dimen/dpp_30"-->
+    <!--            android:text="保存"-->
+    <!--            android:textColor="@color/titleColor"-->
+    <!--            android:textSize="@dimen/spp_14"-->
+    <!--            android:visibility="invisible" />-->
+
+    <!--    </RelativeLayout>-->
+</LinearLayout>

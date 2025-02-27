@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="_xpopup_list_divider">#080808</color>
+    <color name="_xpopup_title_color">#FFFFFF</color>
+    <color name="_xpopup_content_color">@color/_xpopup_title_color</color>
+    <color name="_xpopup_white_color">#f1f1f1</color>
+    <color name="_xpopup_dark_color">#18181C</color>
+    <color name="_xpopup_light_color">@color/_xpopup_dark_color</color>
+    <color name="_xpopup_list_dark_divider">#444444</color>
+    <color name="_xpopup_cancel">#2CE69B</color>
+    <color name="_xpopup_confirm_start">#fff9ec5c</color>
+    <color name="_xpopup_confirm_end">#ff08fefd</color>
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="rino_scan_turn_off_lights">Turn off the lights</string>
+    <string name="rino_scan_turn_on_lights">Turn on the lights</string>
+</resources>

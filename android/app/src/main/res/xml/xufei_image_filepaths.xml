@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="image"
+        path="" />
+    <external-path
+        name="files_root"
+        path="/storage/emulated/0/temp.apk" />
+    <external-path
+        name="external_storage_root"
+        path="." />
+    <root-path name="root_path" path="."/>
+</paths>

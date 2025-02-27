@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_20"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/tool_bar" />
+
+    <SurfaceView
+        android:id="@+id/capture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"/>
+
+    <ImageView
+        android:id="@+id/scan_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:src="@drawable/shape_scan_line" />
+    <!-- 手动添加 -->
+    <LinearLayout
+        android:id="@+id/ll_manual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dpp_40"
+        android:layout_marginEnd="@dimen/dpp_40"
+        android:layout_marginBottom="@dimen/dpp_150"
+        android:background="@drawable/shape_bg_white_15"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dpp_40"
+        android:paddingTop="@dimen/dpp_56"
+        android:paddingBottom="@dimen/dpp_56">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rino_common_manual_add"
+            android:textColor="@color/f_454545"
+            android:textSize="@dimen/spp_16" />
+
+        <EditText
+            android:id="@+id/et_scan_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpp_20"
+            android:layout_weight="1"
+            android:background="@color/c_EEEEEE"
+            android:hint="@string/rino_common_input_device_id"
+            android:paddingStart="@dimen/dpp_20"
+            android:paddingTop="@dimen/dpp_16"
+            android:paddingEnd="@dimen/dpp_20"
+            android:paddingBottom="@dimen/dpp_16"
+            android:singleLine="true"
+            android:textColor="@color/c_ABABAB"
+            android:textSize="@dimen/spp_12" />
+
+        <TextView
+            android:id="@+id/tv_manual_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dpp_32"
+            android:paddingEnd="@dimen/dpp_40"
+            android:text="@string/rino_common_add"
+            android:textColor="@color/main_theme_color"
+            android:textSize="@dimen/spp_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#8D000000"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_album"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_scan_album" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="相册"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_light"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/tb_light"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_scan_light"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/tv_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="开灯"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

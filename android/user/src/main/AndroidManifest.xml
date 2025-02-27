@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.smart.rinoiot.user">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application>
+        <activity
+            android:name="com.smart.rinoiot.user.activity.CountryActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.smart.rinoiot.user.activity.TimeZoneActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.smart.rinoiot.user.activity.ForgetPsdActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.smart.rinoiot.center.activity.HomeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.smart.rinoiot.center.activity.IpCameraControlPanelActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+            android:name="com.smart.rinoiot.user.activity.setting.SettingActivity"
+            android:screenOrientation="landscape"
+            android:exported="true" />
+        <activity
+            android:name="com.smart.rinoiot.user.activity.setting.AboutAppActivity"
+            android:screenOrientation="landscape"
+            android:exported="true" />
+        <activity
+            android:name="com.smart.rinoiot.user.activity.setting.AccountSecurityActivity"
+            android:screenOrientation="landscape"
+            android:exported="true" />
+        <activity
+            android:name="com.smart.rinoiot.user.activity.setting.ChangePwdSendCodeActivity"
+            android:screenOrientation="landscape"
+            android:exported="true" />
+        <activity
+            android:name=".activity.setting.LogoutTipsActivity"
+            android:screenOrientation="landscape"
+            android:exported="true" />
+        <activity
+            android:name=".activity.setting.LogoutSendCodeActivity"
+            android:screenOrientation="landscape"
+            android:exported="true" />
+        <activity
+            android:name=".activity.setting.LogoutInputCodeActivity"
+            android:screenOrientation="landscape"
+            android:exported="true" />
+        <activity
+            android:name=".activity.NotReceiveVerifyCodeActivity"
+            android:screenOrientation="landscape"
+            android:exported="true" />
+
+
+        <!-- 请求alexa连接时，回调注册监听，必须配置App Links Assistant，具体步骤如连接
+        https://developer.android.com/studio/write/app-link-indexing
+         https://iot.rinoiot.com/auth地址必须配置到alexa到ACCOUNT LINKING中，
+         配置连接如下：https://developer.amazon.com/alexa/console/ask/amzn1.ask.skill.1409c905-c6ad-4e37-8bf1-ba0331ad3f25/development/en_US/account-linking-->
+        <activity
+            android:name=".activity.AlexaBindActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+            <!--            <tools:validation testUrl="https://iot.rinoiot.com/auth" />-->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="iot.rinoiot.com"
+                    android:pathPrefix="/auth"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <!-- Alexa 登录认证 -->
+        <activity
+            android:name="com.amazon.identity.auth.device.workflow.WorkflowActivity"
+            android:allowTaskReparenting="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- android:host must use the full package name found in Manifest General Attributes -->
+                <data
+                    android:host="${applicationId}"
+                    android:scheme="amzn" />
+            </intent-filter>
+        </activity>
+
+
+        <!--  中控屏页面  需要横屏  -->
+
+    </application>
+</manifest>

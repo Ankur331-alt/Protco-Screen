@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <cn.jzvd.JzvdStd
+            android:id="@+id/audioPlay"
+            android:layout_width="@dimen/dpp_1"
+            android:layout_height="@dimen/dpp_1"/>
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpp_50"
+            android:layout_marginEnd="@dimen/dpp_50"
+            android:layout_marginTop="@dimen/dpp_50"
+            android:layout_marginBottom="@dimen/dpp_20"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/spp_26"/>
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpp_50"
+            android:layout_marginEnd="@dimen/dpp_50"
+            android:layout_marginTop="@dimen/dpp_20"
+            android:layout_marginBottom="@dimen/dpp_20"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/spp_16"
+            android:visibility="gone"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpp_50"
+            android:layout_marginTop="@dimen/dpp_20"
+            android:layout_marginBottom="@dimen/dpp_20"
+            android:layout_marginEnd="@dimen/dpp_50"
+            android:textColor="@color/c_666666"
+            android:visibility="gone"
+            android:textSize="@dimen/spp_12" />
+        <ImageView
+            android:id="@+id/ivTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:maxHeight="@dimen/dpp_500"
+            android:layout_marginTop="@dimen/dpp_40"
+            android:layout_marginBottom="@dimen/dpp_40"
+            android:visibility="gone" />
+
+        <cn.jzvd.JzvdStd
+            android:id="@+id/videoPlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dpp_800"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dpp_40"
+            android:layout_marginEnd="@dimen/dpp_40"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

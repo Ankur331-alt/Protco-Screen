@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="assist_text_style">
+        <item name="background">?attr/selectableItemBackground</item>
+        <item name="android:textSize">@dimen/spp_12</item>
+        <item name="android:textColor">@color/summaryColor</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="tv16SpTitleLeftStyle">
+        <item name="android:textSize">@dimen/spp_16</item>
+        <item name="android:textColor">@color/cen_connect_not_connect_color</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="tv11SpTitleLeftStyle">
+        <item name="android:textSize">@dimen/spp_22</item>
+        <item name="android:textColor">@color/cen_connect_step_selected_color</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lines">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="tv11SpSubTitleRightStyle">
+        <item name="android:textSize">@dimen/spp_22</item>
+        <item name="android:textColor">@color/cen_connect_not_connect_color</item>
+        <item name="android:gravity">right</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="tv16SpSubTitleLeftStyleRl">
+        <item name="android:textSize">@dimen/spp_24</item>
+        <item name="android:textColor">@color/f_454545</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="tv14SpTitleTopStyleRl">
+        <item name="android:textSize">@dimen/spp_28</item>
+        <item name="android:textColor">@color/cen_connect_step_selected_color</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lines">1</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+    <style name="tv16SpTitleLeftStyleRl">
+        <item name="android:textSize">@dimen/spp_24</item>
+        <item name="android:textColor">@color/titleColor</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="line_style">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">#E2E2E2</item>
+
+    </style>
+
+    <style name="tv16SpCenterStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/spp_32</item>
+        <item name="android:textColor">@color/cen_connect_step_selected_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="tv12SpTopStyle">
+        <item name="android:textSize">@dimen/spp_24</item>
+        <item name="android:textColor">@color/cen_connect_step_selected_color</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <declare-styleable name="CustomEditText">
+        <attr name="isPassword" format="boolean" />
+        <attr name="hintText" format="string" />
+    </declare-styleable>
+
+    <style name="popup_activity" parent="Theme.AppCompat.Dialog">
+        <item name="colorPrimary">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除标题 -->
+        <item name="windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+    <style name="edit_wifi_text_style">
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textColorHint">#FF575757</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textSize">15sp</item>
+        <item name="background">@null</item>
+    </style>
+</resources>

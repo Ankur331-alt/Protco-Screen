@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/tool_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:padding="@dimen/dpp_80">
+
+        <ImageView
+            android:id="@+id/ivUser"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="@dimen/dpp_100" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivUser"
+            android:layout_marginTop="@dimen/dpp_30"
+            android:textColor="@color/cen_connect_step_selected_color"
+            android:textSize="@dimen/spp_27" />
+
+
+        <TextView
+            android:id="@+id/tvAccount"
+            style="@style/tv14spRightSubTitleStyle" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAccount"
+            android:layout_marginTop="@dimen/dpp_80"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv16SpTitleLeftStyle"
+                android:text="@string/rino_family_role"
+                android:textSize="@dimen/spp_28" />
+
+            <TextView
+                android:id="@+id/tvRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cen_connect_step_selected_color"
+                android:textSize="@dimen/spp_28" />
+
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/icon_grey_right_arrow"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvRemoveFamily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dpp_40"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dpp_40"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:background="@drawable/shape_bg_hint_10"
+            android:gravity="center"
+            android:padding="@dimen/dpp_30"
+            android:text="@string/rino_family_delete_member"
+            android:textColor="@color/white"
+            android:textSize="@dimen/spp_28" />
+    </RelativeLayout>
+</RelativeLayout>

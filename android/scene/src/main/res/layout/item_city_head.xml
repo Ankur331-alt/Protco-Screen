@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvHead"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_140"
+        android:gravity="center_vertical"
+        android:maxLength="1"
+        android:ellipsize="end"
+        android:paddingLeft="@dimen/dpp_80"
+        android:text="A"
+        android:textSize="@dimen/spp_28"
+        android:textColor="@color/white"
+        android:background="@color/cen_common_item_bg_color"/>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="share_device">分享设备</string>
+    <string name="share_with_apps">关联启用 Matter 的应用</string>
+    <string name="share_device_method_hint">选择一个已启用 Matter 的应用来控</string>
+    <string name="using_qr_code">使用配对码</string>
+    <string name="using_pairing_code">使用二维码</string>
+    <string name="share_device_cancel">取消</string>
+    <string name="share_with_pairing_code_hint">设备已经处于配对模式，可通过复制和粘贴该配对码进行设备的连接。此二维码将在3分钟后失败，未分享完成前，请不要退出此界面，否则可能分享失败</string>
+    <string name="share_with_pairing_code_title">使用配对码分享</string>
+    <string name="share_with_qr_code_hint">设备已经处于配对模式，可通过扫码进行设备的连接。此二维码将在3分钟后失败，未分享完成前，请不要退出此界面，否则可能分享失败</string>
+    <string name="share_with_qr_code_title">使用二维码分享</string>
+    <string name="copy_pairing_code">复制配对码</string>
+    <string name="pairing_code_example">0003–4568–910</string>
+    <string name="share_device_error_title">哎呀！出事了</string>
+    <string name="share_device_error_hint">尝试生成设备共享负载时出现问题。请确保您的设备已连接至 WiFi</string>
+    <string name="share_device_in_progress_title">配置设备</string>
+    <string name="share_device_in_progress_hint">我们正在设置设备以进行共享，请稍候。这只需几分钟</string>
+    <string name="wifi">WiFi</string>
+</resources>

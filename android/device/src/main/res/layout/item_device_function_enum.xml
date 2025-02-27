@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvEnumMode"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dpp_32"
+        android:layout_marginEnd="@dimen/dpp_19"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:maxWidth="@dimen/dpp_100"
+        android:textColor="@color/cen_connect_step_selected_color"
+        android:textSize="@dimen/spp_20" />
+
+    <LinearLayout
+        android:id="@+id/llEnum"
+        android:layout_width="@dimen/dpp_60"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivEnumIcon"
+            android:layout_width="@dimen/dpp_64"
+            android:layout_height="@dimen/dpp_64" />
+
+        <TextView
+            android:id="@+id/tvEnumName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dpp_4"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/cen_connect_step_selected_color"
+            android:textSize="@dimen/spp_10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llEnum2"
+        android:layout_width="@dimen/dpp_60"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpp_10"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivEnumIcon2"
+            android:layout_width="@dimen/dpp_64"
+            android:layout_height="@dimen/dpp_64" />
+
+        <TextView
+            android:id="@+id/tvEnumName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dpp_4"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/cen_connect_step_selected_color"
+            android:textSize="@dimen/spp_10" />
+    </LinearLayout>
+</LinearLayout>

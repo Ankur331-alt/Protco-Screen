@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dpp_120">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dpp_32"
+        android:layout_marginEnd="@dimen/dpp_32"
+        android:background="@drawable/shape_ota_upgrade_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dpp_40"
+        android:paddingTop="@dimen/dpp_20"
+        android:paddingBottom="@dimen/dpp_20">
+
+        <ImageView
+            android:id="@+id/iv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_ota_upgrade_progress" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpp_24"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/spp_15" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_4"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@string/rino_device_upgrade_tips"
+                android:textColor="@color/white"
+                android:textSize="@dimen/spp_14" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/dpp_24"
+            android:paddingEnd="@dimen/dpp_40"
+            android:src="@drawable/icon_ota_upgrade_cancel" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dpp_20"
+    android:layout_marginEnd="@dimen/dpp_20"
+    android:background="@drawable/shape_bg_white_20"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/ivUser"
+        android:layout_marginTop="@dimen/dpp_30"
+        android:layout_width="@dimen/dpp_80"
+        android:layout_height="@dimen/dpp_80"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivUser"
+        android:paddingStart="@dimen/dpp_14"
+        android:paddingBottom="@dimen/dpp_14"
+        android:lines="2"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dpp_4"
+        android:textColor="@color/cen_common_item_bg_color"
+        android:textSize="@dimen/spp_14" />
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:textColor="@color/cen_family_member_account"
+        android:textSize="@dimen/spp_12" />
+
+    <TextView
+        android:id="@+id/tvUserPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dpp_20"
+        android:textColor="@color/cen_common_item_bg_color"
+        android:textSize="@dimen/spp_16" />
+
+</RelativeLayout>

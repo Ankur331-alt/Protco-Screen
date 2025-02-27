@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        minSdkVersion 26
+        targetSdkVersion 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        buildConfigField "String", "IFT_APP_ID", "\"${ift_app_id}\""
+        buildConfigField "String", "IFT_APP_KEY", "\"${ift_app_key}\""
+        buildConfigField "String", "OPENAI_API_KEY", "\"${openai_api_key}\""
+        buildConfigField "String", "OPENAI_API_HOST", "\"${openai_api_host}\""
+        buildConfigField "String", "AI_TOOLS_API_KEY", "\"${ai_tools_api_key}\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // AndroidX
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Iflytek
+    implementation project(path: ':iflytek')
+
+    // Inference engine
+    implementation 'com.smart.rinoiot:rinoCmdInferenceSdk:1.0.0'
+    // OpenAI Client
+    api "com.aallam.openai:openai-client:3.3.0"
+    api 'io.ktor:ktor-client-android:2.3.2'
+
+    // Alibaba fast json
+    implementation 'com.alibaba:fastjson:1.2.69'
+
+    // Family module.
+    implementation project(path: ':family')
+
+    // Common module
+    implementation project(path: ':common')
+    implementation project(path: ':scene')
+
+    // Test
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

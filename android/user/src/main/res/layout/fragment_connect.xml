@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/dpp_40"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dpp_40"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_current_network"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dpp_12"
+                android:text="@string/rino_user_current_network"
+                android:textColor="@color/cen_connect_step_selected_color"
+                android:textSize="@dimen/spp_16" />
+
+            <include
+                android:id="@+id/include_current_network"
+                layout="@layout/cen_connect_network_item" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_network_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_30"
+                android:layout_marginBottom="@dimen/dpp_12"
+                android:text="@string/rino_user_available_networks"
+                android:textColor="@color/cen_connect_step_selected_color"
+                android:textSize="@dimen/spp_16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/networkRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_12"
+                android:background="@drawable/shape_bg_item_10"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <View
+        android:id="@+id/selectedView"
+        android:layout_width="@dimen/dpp_4"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_28"
+        android:layout_marginBottom="@dimen/dpp_28"
+        android:layout_alignTop="@id/ivTabIcon"
+        android:layout_alignBottom="@id/ivTabIcon"
+        android:layout_marginStart="@dimen/dpp_8"
+        android:background="@drawable/shape_home_tab_selected_bg" />
+
+    <ImageView
+        android:id="@+id/ivTabIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/ivUnread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_infomation_unread_bg"
+        android:layout_alignRight="@id/ivTabIcon"
+        android:layout_alignTop="@id/ivTabIcon"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dpp_28"
+        android:layout_marginEnd="@dimen/dpp_20"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/tvTabName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ivTabIcon"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/spp_16" />
+
+    <me.majiajie.pagerbottomtabstrip.internal.RoundMessageView
+        android:id="@+id/messages"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="3dp"
+        android:translationX="12dp"
+        android:visibility="gone" />
+</RelativeLayout>

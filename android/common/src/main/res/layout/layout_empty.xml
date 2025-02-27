@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewEmpty"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="@dimen/dpp_501"
+        android:layout_height="@dimen/dpp_270"
+        android:src="@drawable/ic_empty" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_40"
+        android:text="@string/rino_common_no_data_title"
+        android:textSize="@dimen/spp_20"
+        android:textColor="@color/cen_connect_step_selected_color" />
+
+</LinearLayout>

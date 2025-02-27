@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_permission_bg_white_top_18"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingStart="@dimen/dpp_40"
+            android:paddingTop="@dimen/dpp_25"
+            android:paddingEnd="@dimen/dpp_40"
+            android:paddingBottom="@dimen/dpp_25"
+            android:text="@string/rino_nfc_turn_on_bluetooth"
+            android:layout_toStartOf="@id/ivCancel"
+            android:textColor="@color/f_454545"
+            android:textSize="@dimen/spp_15" />
+
+        <ImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/dpp_40"
+            android:src="@drawable/icon_permission_cancel" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_1"
+        android:background="@color/f_d8d8d8" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

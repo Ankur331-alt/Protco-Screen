@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 账号与安全 -->
+            <include
+                android:id="@+id/includeAccountSecurity"
+                layout="@layout/normal_item" />
+            <!-- 时区 -->
+            <include
+                android:id="@+id/includeTimeZone"
+                layout="@layout/normal_item" />
+            <!-- 温度单位 -->
+            <include
+                android:id="@+id/includeTempUnit"
+                layout="@layout/normal_item" />
+            <!-- 清除缓存 -->
+            <include
+                android:id="@+id/includeClearCache"
+                layout="@layout/normal_item" />
+            <!-- 关于Miffy AI -->
+            <include
+                android:id="@+id/includeAbout"
+                layout="@layout/normal_item" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/tvLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpp_32"
+        android:layout_marginEnd="@dimen/dpp_32"
+        android:layout_marginTop="@dimen/dpp_40"
+        android:layout_marginBottom="@dimen/dpp_140"
+        android:background="@drawable/shape_btn_bg_22252b_4"
+        android:gravity="center"
+        android:paddingTop="@dimen/dpp_26"
+        android:paddingBottom="@dimen/dpp_26"
+        android:text="@string/rino_user_logout"
+        android:textColor="@color/white"
+        android:textSize="@dimen/spp_15"/>
+</LinearLayout>

@@ -1,0 +1,215 @@
+plugins {
+    id 'com.android.library'
+    id 'dagger.hilt.android.plugin'
+}
+def isNewArchitectureEnabled() {
+    // To opt-in for the New Architecture, you can either:
+    // - Set `newArchEnabled` to true inside the `gradle.properties` file
+    // - Invoke gradle with `-newArchEnabled=true`
+    // - Set an environment variable `ORG_GRADLE_PROJECT_newArchEnabled=true`
+    return project.hasProperty("newArchEnabled") && project.newArchEnabled == "true"
+}
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    repositories {
+        flatDir { dirs 'libs' }
+    }
+    allprojects {
+        repositories {
+            maven {
+                // All of React Native (JS, Android binaries) is installed from npm
+                url "$rootDir/../node_modules/react-native/android"
+            }
+            maven {
+                // Android JSC is installed from npm
+                url("$rootDir/../node_modules/jsc-android/dist")
+            }
+        }
+    }
+
+    packagingOptions {
+        packagingOptions {
+            pickFirst '**/*.so'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar','*.aar', '*.so'])
+
+    // AndroidX
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'org.jetbrains:annotations:20.1.0'
+
+    // 网络框架
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+    // 引入json转换器，方便将返回的数据转换为json格式
+    api 'com.squareup.retrofit2:converter-gson:2.9.0'
+    // 引入Log拦截器，方便DEBUG模式输出log信息
+    api 'com.squareup.okhttp3:logging-interceptor:4.9.2'
+    // api 'com.squareup.okhttp3:logging-interceptor:3.14.1'
+    api 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    // 吐司
+    api 'com.github.hss01248:Toasty:2.0.6'
+    // 权限申请框架
+    api 'pub.devrel:easypermissions:3.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    api 'androidx.lifecycle:lifecycle-reactivestreams:2.6.1'
+
+    implementation project(path: ':ipc')
+    // 日志框架
+    debugApi 'com.apkfuns.logutils:library:1.7.5'
+    releaseApi 'com.apkfuns.logutils:logutils-no-op:1.7.5'
+    // 验证码输入框
+    api 'com.github.Wynsbin:VerificationCodeInputView:1.0.2'
+    // 图片加载框架
+//    api 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    //相册选择
+    api 'io.github.lucksiege:pictureselector:v2.7.3-rc06'
+    //高斯模糊和圆角等 https://github.com/wasabeef/glide-transformations
+    api 'jp.wasabeef:glide-transformations:4.3.0'
+    // 状态栏框架
+    api 'com.gyf.immersionbar:immersionbar:3.0.0'
+    // 编译支持 MultiDex
+    api 'com.android.support:multidex:1.0.3'
+    // 加载动画
+    api 'com.billy.android:gloading:1.0.0'
+    // 首字母索引
+    api 'com.gjiazhe:wavesidebar:1.3'
+    // 拼音解析
+    api 'com.github.open-android:pinyin4j:2.5.0'
+    // RecycleView 可侧滑、可拖拽
+    api 'com.yanzhenjie.recyclerview:x:1.3.2'
+    // RecycleView 适配器
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+    // 验证码输入框
+    api 'com.github.Wynsbin:VerificationCodeInputView:1.0.2'
+    // 第三方对话框框架
+//    api 'com.github.li-xiaojun:XPopup:2.9.0'
+    // 时间选择器
+    api 'com.contrarywind:Android-PickerView:4.1.9'
+    //viewpager指示器
+    api 'com.github.hackware1993:MagicIndicator:1.7.0'
+    //视频播放
+    api 'cn.jzvd:jiaozivideoplayer:7.7.0'
+    //gif图加载
+    api 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
+    //下拉刷新框架
+    api 'io.github.scwang90:refresh-layout-kernel:2.0.5'      //核心必须依赖
+    api 'io.github.scwang90:refresh-header-classics:2.0.5'    //经典刷新头
+    api 'io.github.scwang90:refresh-footer-classics:2.0.5'    //经典加载
+    api 'io.github.scwang90:refresh-header-material:2.0.5'    //谷歌刷新头
+
+    // 集成MQTT
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+//    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation 'com.github.hannesa2:paho.mqtt.android:3.3.5'
+
+    //3D地图so及jar
+    api 'com.amap.api:3dmap:latest.integration'
+    api 'com.amap.api:search:9.7.0'
+    //定位功能 (3dMap上包含了一部分定位服务)
+//    api 'com.amap.api:location:latest.integration'
+
+    // rn相关 (From node_modules)
+    api "com.facebook.react:react-native:+"
+    api "org.webkit:android-jsc:+"
+
+    // 第三方广播通知
+    api 'org.greenrobot:eventbus:3.0.0'
+    // 第三方zip解压工具
+    api 'net.lingala.zip4j:zip4j:2.11.2'
+
+    // 蓝牙工具库
+    api project(path: ':module_ble')
+    //第三方提示框
+    api project(path: ':xpopup')
+    //断点续传
+    api 'com.liulishuo.filedownloader:library:1.7.7'
+    //Lottie则是使用json文件来代表动画源文件。
+    api 'com.airbnb.android:lottie:5.2.0'
+
+    //底部item
+    api 'me.majiajie:pager-bottom-tab-strip:2.4.0'
+
+    api 'com.google.zxing:core:3.4.0'
+    //腾讯云上传文件
+    api 'com.qcloud.cos:cos-android:5.9.+'
+    //json解析库
+    api 'com.alibaba:fastjson:1.1.67.android'
+
+    // Material
+    def materialVersion = '1.6.0'
+    api "com.google.android.material:material:$materialVersion"
+
+    // Matter
+    api 'com.smart.rinoiot:rinoMatterSdk:1.0.0'
+
+    // Hilt
+    def hiltVersion = "2.45"
+    api "com.google.dagger:hilt-android:$hiltVersion"
+    annotationProcessor "com.google.dagger:hilt-compiler:$hiltVersion"
+
+    // RxJava
+    api "io.reactivex.rxjava2:rxandroid:2.1.1"
+    api "io.reactivex.rxjava2:rxjava:2.2.21"
+
+    // Work Manager
+    def work_version = "2.8.1"
+    api "androidx.work:work-runtime:$work_version"
+
+    // Room.
+    // Hint: It turns out ver 2.6.0 requires API level 34 to compile.
+    //noinspection GradleDependency
+    implementation "androidx.room:room-rxjava2:2.6.0-alpha01"
+    //noinspection GradleDependency
+    implementation "androidx.room:room-runtime:2.6.0-alpha01"
+    //noinspection GradleDependency
+    annotationProcessor "androidx.room:room-compiler:2.6.0-alpha01"
+
+    // Test
+    def junitVersion = '4.13.2'
+    def espressoVersion = '3.5.1'
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+}
+apply from: file("$rootDir/../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)

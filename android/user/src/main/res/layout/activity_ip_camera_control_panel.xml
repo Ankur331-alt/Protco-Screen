@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg">
+
+    <ImageView
+        android:id="@+id/iv_ipc_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_camera_dark"
+        android:layout_centerInParent="true"
+        android:contentDescription="@null"
+        android:visibility="gone"
+        />
+
+    <com.smart.rinoiot.common.ipcimpl.RinoIPCContainerView
+        android:id="@+id/ipc_cv_camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@null"
+        android:scaleY="1.1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@null"
+            android:src="@drawable/icon_back" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/ll_video_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                android:id="@+id/iv_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_volume_mute" />
+            <TextView
+
+                android:id="@+id/tv_video_quality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ultra HD"
+                android:textColor="@color/white"
+                android:layout_marginStart="30dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:background="@drawable/shape_scan_login_tips_bg" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_media_keys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="50dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_capture_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:contentDescription="@null"
+            android:visibility="invisible"
+            android:src="@drawable/ic_capture_frame" />
+
+        <ImageView
+            android:id="@+id/iv_record_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:contentDescription="@null"
+            android:visibility="invisible"
+            android:src="@drawable/ic_record_video" />
+
+        <ImageView
+            android:id="@+id/iv_intercom_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_mic_on" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_pan_tilt_keys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/ic_camera_pan_tilt_bg">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:rotation="45"
+            tools:ignore="UselessParent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <View
+                    android:id="@+id/v_tilt_up"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+                <View
+                    android:id="@+id/v_tilt_right"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <View
+                    android:id="@+id/v_tilt_left"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+                <View
+                    android:id="@+id/v_tilt_down"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

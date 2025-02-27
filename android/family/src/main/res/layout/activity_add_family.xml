@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar" />
+
+    <include
+        android:id="@+id/familyNameInputView"
+        layout="@layout/item_family_input_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_30"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80" />
+
+    <include
+        android:id="@+id/familyLocationInputView"
+        layout="@layout/item_family_subtitle_info"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/dpp_30"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dpp_80"
+        android:layout_marginTop="@dimen/dpp_88"
+        android:layout_marginRight="@dimen/dpp_80"
+        android:text="@string/rino_family_set_location_desc"
+        android:textColor="@color/cen_connect_step_selected_color"
+        android:textSize="@dimen/spp_28" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dpp_40"
+        android:paddingTop="@dimen/dpp_24"
+        android:paddingBottom="@dimen/dpp_24"
+        android:layout_marginStart="@dimen/dpp_40"
+        android:background="@drawable/shape_join_family_confirm_bg"
+        android:gravity="center"
+        android:paddingStart="@dimen/dpp_200"
+        android:paddingEnd="@dimen/dpp_200"
+        android:text="@string/xpopup_save"
+        android:textColor="@color/_xpopup_content_color"
+        android:textSize="@dimen/spp_24"
+        android:textStyle="bold" />
+</LinearLayout>

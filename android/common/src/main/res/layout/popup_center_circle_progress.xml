@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_panel_loading"
+        android:layout_width="@dimen/dpp_300"
+        android:layout_height="@dimen/dpp_300"
+        android:background="@drawable/shape_bg_white_10"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="@dimen/dpp_200"
+            android:layout_height="@dimen/dpp_200"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="panel_loading.json"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dpp_10"
+            android:text="@string/rino_common_loading"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/spp_14" />
+
+        <TextView
+            android:id="@+id/tv_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/spp_14" />
+    </LinearLayout>
+</LinearLayout>

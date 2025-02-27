@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_item_10"
+    android:paddingStart="@dimen/dpp_80"
+    android:paddingBottom="@dimen/dpp_40">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/tv12SpTopStyle"
+        android:paddingTop="@dimen/dpp_40" />
+
+
+    <EditText
+        android:id="@+id/tvSubTitle"
+        style="@style/tv11SpSubTitleRightStyle"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="@dimen/dpp_30"
+        android:layout_marginEnd="@dimen/dpp_40"
+        android:layout_toStartOf="@id/ivClear"
+        android:gravity="left"
+        android:maxLength="30"
+        android:textCursorDrawable="@null"
+        android:background="@null"
+        android:textColor="@color/cen_connect_step_selected_color"
+        android:textColorHint="@color/cen_connect_not_connect_color" />
+
+    <ImageView
+        android:id="@+id/ivClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="@dimen/dpp_40"
+        android:paddingEnd="@dimen/dpp_80"
+        android:src="@drawable/icon_room_setting_right" />
+
+</RelativeLayout>

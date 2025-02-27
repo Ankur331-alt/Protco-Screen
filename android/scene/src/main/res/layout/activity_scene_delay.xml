@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg" >
+
+    <include layout="@layout/tool_bar" />
+
+    <LinearLayout
+        android:layout_width="@dimen/dpp_686"
+        android:layout_height="@dimen/dpp_440"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dpp_40"
+        android:layout_marginStart="@dimen/dpp_30"
+        android:layout_marginEnd="@dimen/dpp_30"
+        android:paddingStart="@dimen/dpp_40"
+        android:paddingEnd="@dimen/dpp_40"
+        android:background="@drawable/shape_bg_white_10" >
+        <com.contrarywind.view.WheelView
+            android:id="@+id/hour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:wheelview_textSize="@dimen/spp_19"
+            app:wheelview_textColorCenter="@color/f_454545"
+            app:wheelview_dividerColor="@color/f_f0f0f0"
+            app:wheelview_dividerWidth="@dimen/dpp_2"
+            app:wheelview_lineSpacingMultiplier="3" />
+        <com.contrarywind.view.WheelView
+            android:id="@+id/min"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:wheelview_textSize="@dimen/spp_19"
+            app:wheelview_textColorCenter="@color/f_454545"
+            app:wheelview_dividerColor="@color/f_f0f0f0"
+            app:wheelview_dividerWidth="@dimen/dpp_2"
+            app:wheelview_lineSpacingMultiplier="3" />
+        <com.contrarywind.view.WheelView
+            android:id="@+id/second"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:wheelview_textSize="@dimen/spp_19"
+            app:wheelview_textColorCenter="@color/f_454545"
+            app:wheelview_dividerColor="@color/f_f0f0f0"
+            app:wheelview_dividerWidth="@dimen/dpp_2"
+            app:wheelview_lineSpacingMultiplier="3" />
+    </LinearLayout>
+</LinearLayout>

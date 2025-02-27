@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dpp_40"
+        android:gravity="center_vertical" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/spp_28"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/tvValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dpp_40"
+                android:textSize="@dimen/spp_22"
+                android:textColor="@color/white_60" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/ivCheck"
+            android:layout_width="@dimen/dpp_88"
+            android:layout_height="@dimen/dpp_88"
+            android:src="@drawable/ic_check_selector" />
+    </LinearLayout>
+<!--    <View-->
+<!--        android:id="@+id/viewLine"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dpp_2"-->
+<!--        android:layout_marginStart="@dimen/dpp_40"-->
+<!--        android:layout_marginEnd="@dimen/dpp_40"-->
+<!--        android:background="@color/f_f0f0f0" />-->
+</LinearLayout>

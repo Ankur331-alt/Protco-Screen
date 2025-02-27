@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_white_5"
+    android:padding="@dimen/dpp_40"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <TextView
+        android:id="@+id/tvFamilyName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpp_24"
+        android:gravity="center_vertical"
+        android:text="@string/rino_common_family_management"
+        android:drawableRight="@drawable/icon_home_manager"
+        android:drawablePadding="@dimen/dpp_22"
+        android:textColor="@color/cen_common_item_bg_color"
+        android:textSize="@dimen/spp_14" />
+
+</LinearLayout>

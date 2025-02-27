@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dpp_54"
+        android:paddingTop="@dimen/dpp_46"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cen_connect_step_selected_color"
+            android:textSize="@dimen/spp_20" />
+
+        <TextView
+            android:id="@+id/tvSubName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpp_40"
+            android:layout_toStartOf="@id/ivSwitchStatus"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/cen_connect_not_connect_color"
+            android:textSize="@dimen/spp_20" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_1"
+        android:background="@color/cen_about_device_line" />
+</LinearLayout>

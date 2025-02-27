@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dpp_90"
+        android:layout_weight="1"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:textColor="@color/cen_common_item_bg_color"
+        android:textColorHint="@color/cen_common_item_bg_color"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/spp_12"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dpp_30"
+        app:srcCompat="@drawable/ic_clear" />
+
+    <ImageView
+        android:id="@+id/ivPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dpp_20"
+        android:layout_marginRight="@dimen/dpp_30"
+        app:srcCompat="@drawable/ic_password_off" />
+
+</merge>

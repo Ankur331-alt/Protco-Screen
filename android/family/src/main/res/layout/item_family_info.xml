@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/dpp_80"
+    android:paddingEnd="@dimen/dpp_80"
+    android:paddingTop="@dimen/dpp_40"
+    android:paddingBottom="@dimen/dpp_40"
+    android:background="@drawable/shape_bg_item_10"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/ivUser"
+        android:layout_width="@dimen/dpp_88"
+        android:layout_height="@dimen/dpp_88"
+        android:layout_marginRight="@dimen/dp_10"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/cen_connect_step_selected_color"
+        android:textSize="@dimen/spp_28" />
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpp_30"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:textColor="@color/cen_connect_not_connect_color"
+        android:textSize="@dimen/spp_28" />
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:background="@drawable/icon_room_setting_right" />
+
+</LinearLayout>

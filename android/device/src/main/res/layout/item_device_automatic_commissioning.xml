@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/shape_secondary_container_bg"
+        tools:ignore="UselessParent">
+        <ImageView
+            android:id="@+id/iv_device_icon"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/tv_device_name"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:maxLines="1"
+            android:layout_marginStart="20dp"
+            android:ellipsize="end" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/s_in_progress"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:layout_marginEnd="50dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/iv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_delete_error"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/cen_information_unread_tip_color"
+                    android:textSize="22sp"
+                    android:text="@string/rino_common_operation_success" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_try_again"
+                android:layout_width="162dp"
+                android:layout_height="64dp"
+                android:visibility="gone"
+                android:text="@string/rino_device_matter_try_again"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:paddingHorizontal="20dp"
+                android:layout_marginStart="50dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/shape_share_device_methods_button_outline" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

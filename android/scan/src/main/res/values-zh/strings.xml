@@ -1,0 +1,4 @@
+<resources>
+    <string name="rino_scan_turn_off_lights">关灯</string>
+    <string name="rino_scan_turn_on_lights">开灯</string>
+</resources>

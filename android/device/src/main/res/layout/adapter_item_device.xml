@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dpp_332"
+    android:background="@drawable/shape_bg_item_10"
+    android:paddingStart="@dimen/dpp_16"
+    android:paddingBottom="@dimen/dpp_16">
+
+    <LinearLayout
+        android:id="@+id/ll_device_details"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dpp_10"
+        android:layout_marginBottom="@dimen/dpp_10"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/dpp_195"
+            android:layout_height="@dimen/dpp_195"
+            android:layout_gravity="start"
+            />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="@dimen/dpp_270"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxWidth="@dimen/dpp_270"
+            android:textColor="@color/cen_connect_step_selected_color"
+            android:textSize="@dimen/spp_18"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_switches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:layout_alignParentEnd="true">
+        <include
+            android:id="@+id/includeSwitch1"
+            layout="@layout/item_device_function_bool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dpp_30"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/includeSwitch2"
+            layout="@layout/item_device_function_bool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dpp_30"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/switchDp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/dpp_32"
+            android:src="@drawable/icon_switch_close" />
+    </LinearLayout>
+
+    <!-- 常用功能位数值类型的数据 -->
+    <LinearLayout
+        android:id="@+id/llDeviceNumber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_switches"
+        android:layout_marginStart="@dimen/dpp_12"
+        android:layout_marginTop="@dimen/dpp_12"
+        android:layout_toEndOf="@id/ll_device_details"
+        android:gravity="bottom|right"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/dpp_16">
+
+        <include
+            android:id="@+id/includeNumber1"
+            layout="@layout/item_device_function_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpp_16"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/includeNumber2"
+            layout="@layout/item_device_function_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpp_16"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/includeEnum1"
+            layout="@layout/item_device_function_enum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpp_16"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/includeEnum2"
+            layout="@layout/item_device_function_enum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpp_16"
+            android:visibility="visible" />
+    </LinearLayout>
+</RelativeLayout>

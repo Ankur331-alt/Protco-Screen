@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+
+    <color name="black">#000000</color>
+    <color name="black_10">#19000000</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_10">#16FFFFFF</color>
+    <color name="white_30">#4cffffff</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="white_75">#bfFFFFFF</color>
+    <color name="white_80">#ccFFFFFF</color>
+    <color name="white_90">#e6ffffff</color>
+
+    <color name="red">#ffff0000</color>
+
+    <!-- 主题色 -->
+    <color name="main_theme_color">#343EEF</color>
+    <!-- 主题背景色 -->
+    <color name="main_theme_bg">#EEEEF2</color>
+    <!-- 按钮背景色 -->
+    <color name="main_theme_btn_bg">@color/main_theme_color</color>
+    <!-- 状态栏背景色 -->
+    <color name="toolbar_bg">@color/cen_main_theme_bg</color>
+    <!-- 标题栏背景色 -->
+    <color name="app_bar_bg">@color/white</color>
+    <!-- 标题字体颜色 -->
+    <color name="titleColor">#22252b</color>
+    <!-- 副标题字体颜色 -->
+    <color name="summaryColor">#939393</color>
+
+    <color name="f_454545">#454545</color>
+    <color name="f_4b4b4b">#4b4b4b</color>
+    <color name="f_535353">#535353</color>
+    <color name="f_777777">#777777</color>
+    <color name="f_aaaaaa">#aaaaaa</color>
+    <color name="f_f0f0f0">#f0f0f0</color>
+    <color name="f_f1f1f1">#f1f1f1</color>
+    <color name="f_fafafa">#fafafa</color>
+    <color name="f_88888a">#88888a</color>
+    <color name="f_939393">#939393</color>
+    <color name="f_959595">#959595</color>
+    <color name="f_9d9d9d">#9d9d9d</color>
+    <color name="f_c2c2c2">#c2c2c2</color>
+    <color name="f_c3c3c3">#c3c3c3</color>
+    <color name="f_c7c7c7">#c7c7c7</color>
+    <color name="f_d4d4d4">#d4d4d4</color>
+    <color name="f_666666">#666666</color>
+    <color name="f_6a6a6a">#6a6a6a</color>
+    <color name="f_e1e1e1">#e1e1e1</color>
+    <color name="f_eeefff">#eeefff</color>
+    <color name="f_ededed">#ededed</color>
+    <color name="f_efefef">#efefef</color>
+    <color name="f_f6f6fa">#F6F6FA</color>
+    <color name="f_f6f8fd">#F6F8FD</color>
+    <color name="f_a9a9ab">#a9a9ab</color>
+    <color name="f_b4b4b4">#b4b4b4</color>
+    <color name="f_d8d8d8">#d8d8d8</color>
+
+    <!-- 蓝色字体颜色 -->
+    <color name="f_3761F3">#3761F3</color>
+
+    <!-- 用于提示和删除 -->
+    <color name="hint_color">#F93319</color>
+    <color name="line_color">#E8E8E8</color>
+    <color name="join_pop_tv_color">#3761F3</color>
+
+    <!--    主字体颜色-->
+    <color name="title_text_color">#454545</color>
+    <!--    副字体颜色-->
+    <color name="sub_title_text_color">#939393</color>
+
+    <color name="c_EFF2F4">#EFF2F4</color>
+    <color name="c_F9F9F9">#F9F9F9</color>
+    <color name="c_272518">#272518</color>
+    <color name="c_696969">#696969</color>
+    <color name="c_414141">#414141</color>
+    <color name="c_E1E5E8">#E1E5E8</color>
+    <color name="c_1A353FEF">#1A353FEF</color>
+    <color name="c_B0B0B0">#B0B0B0</color>
+    <color name="c_A5A5A5">#A5A5A5</color>
+    <color name="c_FF8D49">#FF8D49</color>
+    <color name="c_333333">#333333</color>
+    <color name="c_4A4A4A">#4A4A4A</color>
+    <color name="c_F5F5F5">#F5F5F5</color>
+    <color name="c_A6A6A6">#A6A6A6</color>
+    <color name="c_3C3C43">#3C3C43</color>
+    <color name="c_F7F7FA">#F7F7FA</color>
+    <color name="c_AEAEAE">#AEAEAE</color>
+    <color name="c_666666">#666666</color>
+    <color name="c_EF5641">#EF5641</color>
+    <color name="c_181818">#181818</color>
+    <color name="c_F8F8F8">#F8F8F8</color>
+    <color name="c_ADADAD">#ADADAD</color>
+    <color name="c_E4E4E4">#E4E4E4</color>
+    <color name="c_929292">#929292</color>
+    <color name="c_3A3A3A">#3A3A3A</color>
+    <color name="c_003761F3">#003761F3</color>
+    <color name="c_EEEEEE">#EEEEEE</color>
+    <color name="c_ABABAB">#ABABAB</color>
+    <color name="black_20">#33000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="c_353FEF">#353FEF</color>
+    <color name="c_DEDEDE">#DEDEDE</color>
+    <color name="c_BBBBBD">#BBBBBD</color>
+    <color name="c_F5F3F3">#F5F3F3</color>
+    <color name="c_828282">#828282</color>
+    <color name="c_888888">#888888</color>
+    <color name="c_CCF2F2F2">#CCF2F2F2</color>
+    <color name="c_AFAFAF">#AFAFAF</color>
+    <color name="c_7f000000">#7f000000</color>
+    <color name="c_999999">#999999</color>
+    <color name="c_7B7B7B">#7B7B7B</color>
+    <color name="c_070707">#070707</color>
+    <color name="c_757575">#757575</color>
+
+
+    <!-- 中控屏颜色管理 -->
+    <color name="cen_common_item_bg_color">#18181C</color>
+    <color name="cen_main_theme_bg">@color/_xpopup_list_divider</color>
+    <color name="cen_main_theme_36_bg">#5918181C</color>
+    <color name="cen_connect_step_selected_color">@color/_xpopup_title_color</color>
+    <color name="cen_connect_not_connect_color">#88FFFFFF</color>
+    <color name="cen_user_available_wifi_color">#CCFFFFFF</color>
+    <color name="cen_connect_step_normal_color">#AAAABC</color>
+    <color name="cen_connect_shape_selected_start_gradient">#ffbef068</color>
+    <color name="cen_connect_shape_selected_end_gradient">#ff0bd29d</color>
+    <color name="cen_connect_shape_normal_line">#ff404045</color>
+    <color name="cen_connect_step_line">#404045</color>
+    <color name="cen_connect_selected_step_normal_color">#979797</color>
+    <color name="cen_change_family_color">#454545</color>
+    <color name="cen_information_unread_tip_color">#ED3F3F</color>
+    <color name="cen_family_manager_dialog_text_color">#333333</color>
+    <color name="cen_create_room_save_color">#222222</color>
+    <color name="cen_logout_start_gradient">#FA4444</color>
+    <color name="cen_logout_end_gradient">#E5083E</color>
+    <color name="cen_join_family_start_gradient">#F9EC5C</color>
+    <color name="cen_join_family_end_gradient">#08FEFD</color>
+    <color name="cen_qrcode_black">#000000</color>
+    <color name="cen_about_device_line">#313234</color>
+    <color name="cen_family_member_account">#9897AD</color>
+    <color name="wheel_curtain_color_one">#18181C</color>
+    <color name="wheel_curtain_color_two">#35353C</color>
+    <color name="cen_device_config_paired_color">#2CE69B</color>
+    <color name="cen_ipc_place_color">#A5080808</color>
+    <color name="cen_ipc_place_play_bg">#080808</color>
+</resources>

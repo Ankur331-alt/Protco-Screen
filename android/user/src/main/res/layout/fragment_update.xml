@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/dpp_60"
+    android:background="@drawable/shape_bg_item_10"
+    android:fillViewport="true"
+    android:padding="@dimen/dpp_44"
+    android:scrollbars="none">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivUpdateTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_update_top_bg" />
+
+        <RelativeLayout
+            android:id="@+id/llSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivUpdateTop"
+            android:layout_alignStart="@id/ivUpdateTop"
+            android:layout_alignEnd="@id/ivUpdateTop">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/dpp_28"
+                android:layout_toStartOf="@id/ivSwitchStatus"
+                android:text="@string/rino_user_auto_update"
+                android:textColor="@color/cen_connect_step_selected_color"
+                android:textSize="@dimen/spp_24"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivSwitchStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingStart="@dimen/dpp_30"
+                android:paddingTop="@dimen/dpp_28"
+                android:src="@drawable/update_switch_selector" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvSwitchTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llSwitch"
+            android:layout_alignStart="@id/ivUpdateTop"
+            android:layout_alignEnd="@id/ivUpdateTop"
+            android:layout_marginTop="@dimen/dpp_8"
+            android:text="@string/rino_user_auto_update_tips"
+            android:textColor="@color/cen_connect_not_connect_color"
+            android:textSize="@dimen/spp_14" />
+
+        <TextView
+            android:id="@+id/tvLocationVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSwitchTips"
+            android:layout_alignStart="@id/ivUpdateTop"
+            android:layout_alignEnd="@id/ivUpdateTop"
+            android:layout_marginTop="@dimen/dpp_27"
+            android:text="@string/rino_device_ota_current_version"
+            android:textColor="@color/cen_connect_step_selected_color"
+            android:textSize="@dimen/spp_24"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

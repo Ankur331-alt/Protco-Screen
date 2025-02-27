@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/dpp_30"
+        android:paddingBottom="@dimen/dpp_30"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/dpp_200"
+            android:layout_height="@dimen/dpp_200"
+            android:layout_marginEnd="@dimen/dpp_40" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/spp_28" />
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="@dimen/dpp_88"
+            android:layout_height="@dimen/dpp_88"
+            android:src="@drawable/ic_arrow_right" />
+
+        <ImageView
+            android:id="@+id/ivTip"
+            android:layout_width="@dimen/dpp_88"
+            android:layout_height="@dimen/dpp_88"
+            android:src="@drawable/ic_disable_tip" />
+    </LinearLayout>
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_2"
+        android:layout_marginStart="@dimen/dpp_136"
+        android:background="@color/f_f0f0f0"
+        android:visibility="invisible"/>
+</LinearLayout>

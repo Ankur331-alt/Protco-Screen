@@ -1,0 +1,7 @@
+<resources>
+    <string name="lib_name">blelib</string>
+    <string name="ota_error">Failed to update device %1$s. Please check Bluetooth connection.</string>
+    <string name="update_retry">Retry</string>
+    <string name="update_cancel">Cancel</string>
+    <string name="updating">Updating, please wait…</string>
+</resources>

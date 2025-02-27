@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/cen_main_theme_bg"
+    android:orientation="vertical">
+    <include layout="@layout/tool_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll_share_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/shape_share_device_methods_bg"
+        android:layout_margin="40dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="30dp"
+            android:ellipsize="end"
+            android:maxWidth="550dp"
+            android:maxLines="1"
+            android:text="@string/share_device_in_progress_title"
+            android:textColor="@color/c_F7F7FA"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tv_share_device_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="760dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/c_696969"
+            android:text="@string/share_device_in_progress_hint"
+            android:textSize="24sp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="216dp"
+            android:layout_height="216dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_qr_code"
+            android:layout_marginTop="59dp"
+            android:layout_marginBottom="100dp"
+            android:visibility="invisible"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_paring_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="90dp"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/tv_paring_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2CE69B"
+                android:text="@string/pairing_code_example"
+                android:textSize="40sp"
+                android:layout_marginBottom="85dp"
+                />
+
+            <Button
+                android:id="@+id/btn_copy_paring_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cen_main_theme_bg"
+                android:textSize="24sp"
+                android:textAllCaps="false"
+                android:paddingHorizontal="50dp"
+                android:paddingVertical="20dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/shape_bg_gradient_y_to_b_5"
+                android:text="@string/copy_pairing_code"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

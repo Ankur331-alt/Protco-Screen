@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/icon_speak_1" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_2" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_3" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_4" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_5" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_6" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_7" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_8" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_9" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_10" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_11" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_12" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_13" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_14" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_15" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_16" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_17" android:duration="50" />
+    <item android:drawable="@drawable/icon_speak_18" android:duration="50" />
+</animation-list>

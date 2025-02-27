@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlItem"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dpp_420"
+    android:layout_marginRight="@dimen/dpp_40"
+    android:background="@drawable/shape_bg_item_10"
+    android:orientation="vertical"
+    android:padding="@dimen/dpp_32">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/icon_room_right"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/rino_family_name"
+        android:textColor="@color/cen_connect_not_connect_color"
+        android:textSize="@dimen/spp_22"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dpp_40"
+        android:ellipsize="end"
+        android:lines="4"
+        android:textColor="@color/cen_connect_step_selected_color"
+        android:textSize="@dimen/spp_24"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,13 @@
+ext {
+    android = [
+            applicationId    : "com.smart.rinoiot",
+            buildToolsVersion: "30.0.3",
+            compileSdkVersion: 33,
+            targetSdkVersion : 33,
+            minSdkVersion    : 26,
+            versionCode      : 1,
+            versionName      : "2.0.2"
+    ]
+    isDebugType = false //module
+    isPrintLog = true
+}
