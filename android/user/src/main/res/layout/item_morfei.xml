@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"
+        android:background="@drawable/shape_cen_dialog_confirm"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="今天天气怎么样"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        />
+</RelativeLayout>

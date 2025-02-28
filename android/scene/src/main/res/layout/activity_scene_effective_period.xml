@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg">
+
+    <include layout="@layout/tool_bar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_80"
+        android:layout_marginBottom="@dimen/dpp_40"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:background="@drawable/shape_bg_item_10"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <LinearLayout
+        android:id="@+id/viewRepeat"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_40"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:padding="@dimen/dpp_40"
+        android:gravity="center_vertical"
+        android:background="@drawable/shape_bg_item_10" >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lines="1"
+            android:text="@string/rino_scene_time_repeat_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/spp_28" />
+        <TextView
+            android:id="@+id/tvRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rino_scene_time_every_day_title"
+            android:lines="1"
+            android:textColor="@color/white_60"
+            android:textSize="@dimen/spp_28" />
+        <ImageView
+            android:layout_width="@dimen/dpp_88"
+            android:layout_height="@dimen/dpp_88"
+            android:layout_marginStart="@dimen/dpp_40"
+            android:src="@drawable/ic_arrow_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewCurrentCity"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_80"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:padding="@dimen/dpp_40"
+        android:gravity="center_vertical"
+        android:background="@drawable/shape_bg_item_10"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lines="1"
+            android:text="@string/rino_scene_weather_current_city"
+            android:textColor="@color/white"
+            android:textSize="@dimen/spp_28" />
+        <TextView
+            android:id="@+id/tvCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rino_common_city_locating"
+            android:lines="1"
+            android:textColor="@color/white_60"
+            android:textSize="@dimen/spp_28" />
+        <ImageView
+            android:layout_width="@dimen/dpp_88"
+            android:layout_height="@dimen/dpp_88"
+            android:layout_marginStart="@dimen/dpp_40"
+            android:src="@drawable/ic_arrow_right" />
+    </LinearLayout>
+</LinearLayout>

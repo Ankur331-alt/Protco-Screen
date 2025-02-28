@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dpp_1360"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/dpp_80"
+        android:paddingBottom="@dimen/dpp_32"
+        android:paddingStart="@dimen/dpp_80"
+        android:paddingEnd="@dimen/dpp_80"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/spp_32"
+        android:textColor="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_600"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_120"
+        android:layout_marginBottom="@dimen/dpp_160"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80" >
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dpp_100"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/rino_common_cancel"
+            android:textSize="@dimen/spp_16"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_bg_stroke_2ce69b_5" />
+        <View
+            android:layout_width="@dimen/dpp_40"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dpp_100"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/rino_common_save"
+            android:textSize="@dimen/spp_16"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_bg_gradient_y_to_b_5" />
+    </LinearLayout>
+</LinearLayout>

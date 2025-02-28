@@ -1,0 +1,5 @@
+<resources>
+<!--    <string name="rino_app_name">Rino Smart</string>-->
+    <string name="rino_app_name">Protco Smart</string>
+    <string name="asset_statements" translatable="false">[{ \"include\": \"https://iot.rinoiot.com/.well-known/assetlinks.json\" }]</string>
+</resources>

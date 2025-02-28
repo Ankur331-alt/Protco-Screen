@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_bg_item_10"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dpp_100"
+    android:paddingTop="@dimen/dpp_40"
+    android:paddingEnd="@dimen/dpp_100"
+    android:paddingBottom="@dimen/dpp_100">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/tv12SpTopStyle"
+        android:layout_gravity="center"
+        android:padding="@dimen/dpp_30"
+        android:text="@string/rino_family_is_join_family"
+        android:textSize="@dimen/spp_28" />
+
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_30"
+        android:background="@drawable/shape_join_family_confirm_bg"
+        android:gravity="center"
+        android:padding="@dimen/dpp_30"
+        android:text="@string/rino_family_join_family"
+        android:textColor="@color/cen_connect_step_selected_color"
+        android:textSize="@dimen/spp_24"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tvRefuse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_60"
+        android:background="@drawable/shape_logout_bg"
+        android:gravity="center"
+        android:padding="@dimen/dpp_30"
+        android:text="@string/rino_family_reject_join"
+        android:textColor="@color/cen_connect_step_selected_color"
+        android:textSize="@dimen/spp_24" />
+
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_60"
+        android:background="@drawable/shape_cen_dialog_cancel"
+        android:gravity="center"
+        android:padding="@dimen/dpp_30"
+        android:text="@string/rino_family_not_join_family"
+        android:textColor="@color/cen_connect_step_selected_color"
+        android:textSize="@dimen/spp_24" />
+
+</LinearLayout>

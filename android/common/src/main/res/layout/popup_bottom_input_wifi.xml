@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dpp_1334"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_48" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpp_40"
+        android:layout_marginEnd="@dimen/dpp_40"
+        android:layout_marginBottom="@dimen/dpp_20"
+        android:gravity="center_vertical" >
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/rino_scene_more_title"
+            android:textSize="@dimen/spp_15"
+            android:textColor="@color/f_454545" />
+        <TextView
+            android:id="@+id/tvSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/rino_common_skip"
+            android:textSize="@dimen/spp_15"
+            android:textColor="@color/f_b4b4b4" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_100"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_40"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="@string/rino_device_activator_wifi_title"
+        android:textSize="@dimen/spp_16"
+        android:textStyle="bold"
+        android:textColor="@color/f_454545" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_60"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="@dimen/dpp_60"
+            android:layout_height="@dimen/dpp_60" />
+
+        <EditText
+            android:id="@+id/etWiFiName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dpp_40"
+            android:layout_marginEnd="@dimen/dpp_40"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/spp_16"
+            android:textColor="@color/f_454545"
+            android:textCursorDrawable="@null"
+            android:background="@null" />
+
+        <ImageView
+            android:id="@+id/ivChangeWifi"
+            android:layout_width="@dimen/dpp_40"
+            android:layout_height="@dimen/dpp_40"
+            android:src="@drawable/ic_change_wifi" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_2"
+        android:layout_marginTop="@dimen/dpp_30"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:background="@color/f_f0f0f0" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_20"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_50"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="@dimen/dpp_60"
+            android:layout_height="@dimen/dpp_60"
+            android:src="@drawable/ic_password_icon" />
+
+        <com.smart.rinoiot.common.view.CustomEditText
+            android:id="@+id/etPwd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dpp_40"
+            app:isPassword="true" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_2"
+        android:layout_marginTop="@dimen/dpp_30"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:background="@color/f_f0f0f0" />
+
+    <TextView
+        android:id="@+id/tvErrorTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_30"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:background="#fbfbe9"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:textColor="@color/summaryColor"
+        android:textSize="@dimen/spp_12"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/tvContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_100"
+        android:layout_marginBottom="@dimen/dpp_80"
+        android:layout_marginStart="@dimen/dpp_40"
+        android:layout_marginEnd="@dimen/dpp_40"
+        android:gravity="center"
+        android:text="@string/rino_common_next"
+        android:textSize="@dimen/spp_16"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_btn_bg_22252b_4" />
+</LinearLayout>

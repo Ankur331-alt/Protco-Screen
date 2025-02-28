@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/shape_bg_item_10">
+
+    <LinearLayout
+        android:id="@+id/ll_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text="@string/rino_scene_more_style_title" />
+
+        <TextView
+            android:id="@+id/tv_style_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rino_user_style_dark"
+            android:textColor="@color/cen_connect_not_connect_color"
+            android:textSize="22sp"/>
+
+        <ImageView
+            android:id="@+id/iv_style_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scene_arrow_right"
+            android:contentDescription="@null"
+            android:layout_marginStart="15dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text="@string/rino_user_language" />
+
+        <TextView
+            android:id="@+id/tv_language_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rino_user_language_english"
+            android:textColor="@color/cen_connect_not_connect_color"
+            android:textSize="22sp"/>
+
+        <ImageView
+            android:id="@+id/iv_language_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scene_arrow_right"
+            android:contentDescription="@null"
+            android:layout_marginStart="15dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_screen_off_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text="@string/rino_user_screen_time" />
+
+        <TextView
+            android:id="@+id/tv_screen_off_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cen_connect_not_connect_color"
+            android:textSize="22sp"/>
+
+        <ImageView
+            android:id="@+id/iv_screen_off_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scene_arrow_right"
+            android:contentDescription="@null"
+            android:layout_marginStart="15dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_server_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text="@string/rino_com_ai_server_address" />
+
+        <TextView
+            android:id="@+id/tv_server_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rino_com_default_server_address"
+            android:textColor="@color/cen_connect_not_connect_color"
+            android:textSize="22sp"/>
+
+        <ImageView
+            android:id="@+id/iv_server_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scene_arrow_right"
+            android:contentDescription="@null"
+            android:layout_marginStart="15dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_voice_assistant_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text="@string/rino_com_voice_assistant_settings"/>
+
+        <ImageView
+            android:id="@+id/iv_voice_assistant_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scene_arrow_right"
+            android:contentDescription="@null"
+            android:layout_marginStart="15dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text="@string/rino_mine_clear_cache" />
+
+        <TextView
+            android:id="@+id/tv_cache_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cen_connect_not_connect_color"
+            android:textSize="22sp"/>
+
+        <ImageView
+            android:id="@+id/iv_cache_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scene_arrow_right"
+            android:contentDescription="@null"
+            android:layout_marginStart="15dp"
+            />
+    </LinearLayout>
+</LinearLayout>

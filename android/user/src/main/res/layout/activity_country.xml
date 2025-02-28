@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/tool_bar" />
+
+    <EditText android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_80"
+        android:layout_marginStart="@dimen/dpp_30"
+        android:layout_marginEnd="@dimen/dpp_30"
+        android:layout_marginTop="@dimen/dpp_20"
+        android:layout_marginBottom="@dimen/dpp_20"
+        android:singleLine="true"
+        android:paddingStart="@dimen/dpp_30"
+        android:paddingEnd="@dimen/dpp_30"
+        android:gravity="center_vertical"
+        android:hint="@string/rino_user_input_country"
+        android:textSize="@dimen/spp_14"
+        android:textColorHint="@color/f_959595"
+        android:textColor="@color/titleColor"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="@dimen/dpp_20"
+        android:background="@drawable/bg_search_bar"
+        android:textCursorDrawable="@null"
+        android:imeOptions="actionSearch" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.gjiazhe.wavesidebar.WaveSideBar
+            android:id="@+id/side_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/dpp_36"
+            app:sidebar_lazy_respond="false"
+            app:sidebar_max_offset="@dimen/dpp_60"
+            app:sidebar_position="right"
+            app:sidebar_text_alignment="center"
+            app:sidebar_text_color="@color/f_454545"
+            app:sidebar_text_size="@dimen/spp_10" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dpp_32"
+        android:layout_marginTop="@dimen/dpp_60"
+        android:text="@string/rino_mine_set_account_verification"
+        android:textColor="@color/main_theme_color"
+        android:textSize="@dimen/spp_20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_send_verification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/spp_14"
+        android:textColor="@color/f_454545"
+        android:paddingStart="@dimen/dpp_32"
+        android:paddingEnd="@dimen/dpp_32"
+        android:text="@string/rino_user_cancel_account_get_verify_code"/>
+    <TextView
+        android:id="@+id/tv_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpp_32"
+        android:layout_marginEnd="@dimen/dpp_32"
+        android:layout_marginTop="@dimen/dpp_240"
+        android:layout_marginBottom="@dimen/dpp_140"
+        android:background="@drawable/shape_btn_bg_22252b_4"
+        android:gravity="center"
+        android:paddingTop="@dimen/dpp_26"
+        android:paddingBottom="@dimen/dpp_26"
+        android:text="@string/rino_user_get_verify_code"
+        android:textColor="@color/white"
+        android:textSize="@dimen/spp_15"/>
+
+</LinearLayout>

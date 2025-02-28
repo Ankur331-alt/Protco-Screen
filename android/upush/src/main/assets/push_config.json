@@ -1,0 +1,12 @@
+{
+  "huaweiAppId": "appid=106659207",
+  "oppoKey": "891cd5f9be5f4df4b77f8465ecb54971",
+  "oppoSecret": "57d3a30487aa4ca0a448c1a01d48dc9f",
+  "miAppId": "2882303761520170874",
+  "miKey": "5332017093874",
+  "vivoAppId": "105574370",
+  "vivoAppSecret": "d75842f5-9514-4263-ae0e-0ec554eded11",
+  "umKey": "637883b788ccdf4b7e697045",
+  "messageSecret": "0b24903ded947bf828550256204f3e46",
+  "packageName": "com.smart.rinoiot"
+}

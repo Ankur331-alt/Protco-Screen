@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/icon_wakeup_1" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_2" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_3" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_4" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_5" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_6" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_7" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_8" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_9" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_10" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_11" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_12" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_13" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_14" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_15" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_16" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_17" android:duration="50" />
+    <item android:drawable="@drawable/icon_wakeup_18" android:duration="50" />
+</animation-list>

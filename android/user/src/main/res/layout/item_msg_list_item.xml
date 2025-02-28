@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dpp_80"
+    android:layout_marginEnd="@dimen/dpp_80"
+    android:layout_marginBottom="@dimen/dpp_48"
+    android:background="@drawable/shape_bg_item_10"
+    android:padding="@dimen/dpp_32">
+
+    <ImageView
+        android:id="@+id/iv_msg"
+        android:layout_width="@dimen/dpp_80"
+        android:layout_height="@dimen/dpp_80"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/ll_msg_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpp_48"
+        android:layout_toEndOf="@id/iv_msg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_msg_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textColor="@color/cen_connect_step_selected_color"
+            android:textSize="@dimen/spp_24"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_msg_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpp_9"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textColor="@color/cen_connect_not_connect_color"
+            android:textSize="@dimen/spp_20" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_msg_content"
+        android:layout_marginStart="@dimen/dpp_48"
+        android:layout_marginTop="@dimen/dpp_10"
+        android:layout_toEndOf="@id/iv_msg"
+        android:orientation="horizontal">
+
+        <!-- android:drawableLeft="@drawable/icon_msg_family"
+            android:drawablePadding="@dimen/dpp_10" -->
+        <TextView
+            android:id="@+id/tv_msg_family_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dpp_30"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textColor="@color/cen_connect_not_connect_color"
+            android:textSize="@dimen/spp_16" />
+
+        <TextView
+            android:id="@+id/tv_msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/cen_connect_not_connect_color"
+            android:textSize="@dimen/spp_16" />
+    </LinearLayout>
+
+</RelativeLayout>

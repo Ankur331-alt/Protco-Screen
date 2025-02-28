@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg">
+
+    <include layout="@layout/tool_bar" />
+
+    <EditText android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_160"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:layout_marginTop="@dimen/dpp_40"
+        android:layout_marginBottom="@dimen/dpp_40"
+        android:singleLine="true"
+        android:paddingStart="@dimen/dpp_60"
+        android:paddingEnd="@dimen/dpp_60"
+        android:gravity="center_vertical"
+        android:hint="@string/rino_scene_city_input_title"
+        android:textSize="@dimen/spp_28"
+        android:textColorHint="@color/f_959595"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="@dimen/dpp_20"
+        android:background="@drawable/bg_search_bar"
+        android:textCursorDrawable="@null"
+        android:imeOptions="actionSearch"
+        android:drawableTint="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/viewLocationCity"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_200"
+        android:paddingStart="@dimen/dpp_80"
+        android:paddingEnd="@dimen/dpp_80"
+        android:gravity="center_vertical"
+        android:background="@color/cen_common_item_bg_color">
+        <ImageView
+            android:layout_width="@dimen/dpp_80"
+            android:layout_height="@dimen/dpp_80"
+            android:src="@drawable/ic_location"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvCurrentCity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dpp_16"
+            android:layout_marginEnd="@dimen/dpp_16"
+            android:text="@string/rino_common_city_locating"
+            android:textSize="@dimen/spp_28"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvReLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rino_scene_to_reposition"
+            android:textSize="@dimen/spp_28"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.gjiazhe.wavesidebar.WaveSideBar
+            android:id="@+id/side_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/dpp_72"
+            app:sidebar_lazy_respond="false"
+            app:sidebar_max_offset="@dimen/dpp_120"
+            app:sidebar_position="right"
+            app:sidebar_text_alignment="center"
+            app:sidebar_text_color="@color/white"
+            app:sidebar_text_size="@dimen/spp_12" />
+    </FrameLayout>
+</LinearLayout>

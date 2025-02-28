@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.smart.rinoiot.common">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:largeHeap="true"
+        tools:targetApi="28"
+        tools:replace="android:allowBackup"
+        tools:ignore="ExportedPreferenceActivity">
+        <activity
+            android:name="com.smart.rinoiot.common.activity.WebViewActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.smart.rinoiot.common.activity.MapActivity"
+            android:exported="true" /> <!-- <service android:name="org.eclipse.paho.android.service.MqttService" /> -->
+        <activity
+            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".rn.PanelActivity"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".rn.MtrDevicePanelActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+    </application>
+
+</manifest>

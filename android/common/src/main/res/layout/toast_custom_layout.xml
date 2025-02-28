@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/dpp_60"
+    android:background="@drawable/shape_system_toast_bg_20"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/toast_text"
+        android:layout_gravity="center"
+        android:textSize="@dimen/spp_14"
+        android:paddingTop="@dimen/dpp_20"
+        android:paddingBottom="@dimen/dpp_20"
+        android:paddingStart="@dimen/dpp_30"
+        android:paddingEnd="@dimen/dpp_30"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="590dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingVertical="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/shape_secondary_container_bg">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:maxLength="50"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:layout_marginHorizontal="50dp"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/rino_com_voice_assistant_listening_duration"
+                android:layout_marginTop="2dp"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="@color/cen_connect_not_connect_color"
+                android:textSize="16sp"/>
+            <SeekBar
+                android:id="@+id/sb_continuous_listening_duration"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:splitTrack="false"
+                android:progress="0"
+                android:layout_marginVertical="10dp"
+                android:min="10"
+                android:max="30"
+                android:paddingHorizontal="10dp"
+                android:thumb="@drawable/shape_seekbar_pill_thumb"
+                android:progressDrawable="@drawable/shape_brightness_seekbar_bg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continuous Interaction"
+                android:textColor="@color/cen_connect_not_connect_color"
+                android:textSize="16sp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+            <ImageView
+                android:id="@+id/iv_continuous_mode"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginHorizontal="50dp">
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="220dp"
+                android:layout_height="64dp"
+                android:text="@string/rino_common_cancel"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:paddingHorizontal="50dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/shape_bg_stroke_2ce69b_5" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="220dp"
+                android:layout_height="64dp"
+                android:text="@string/rino_common_save"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:paddingHorizontal="50dp"
+                app:backgroundTint="@null"
+                android:background="@drawable/shape_bg_gradient_y_to_b_5"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

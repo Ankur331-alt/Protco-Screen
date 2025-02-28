@@ -1,0 +1,16 @@
+rootProject.name = "Protco New"
+include ':app'
+include ':common'
+include ':user'
+include ':scene'
+include ':family'
+include ':device'
+include ':scan'
+include ':module_ble'
+include ':upush'
+apply from: file("$rootDir/../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+
+include ':xpopup'
+include ':voice-assistant'
+include ':ipc'
+include ':iflytek'

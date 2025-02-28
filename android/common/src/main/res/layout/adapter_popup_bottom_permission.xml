@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dpp_50"
+    android:paddingTop="@dimen/dpp_32"
+    android:paddingEnd="@dimen/dpp_32"
+    android:paddingBottom="@dimen/dpp_32">
+    <!-- 蓝牙权限 -->
+    <LinearLayout
+        android:id="@+id/llBlePermission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dpp_40"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPermissionDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/spp_15" />
+
+            <TextView
+                android:id="@+id/tvOpenPermissionStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_16"
+                android:drawablePadding="@dimen/dpp_16"
+                android:textColor="@color/c_888888"
+                android:textSize="@dimen/spp_11" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivPermission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- 定位及别的权限 -->
+    <LinearLayout
+        android:id="@+id/llLocationPermission"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dpp_50"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivLocationPermission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/dpp_26"
+            android:src="@drawable/icon_location_permission" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPermissionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/spp_15" />
+
+            <TextView
+                android:id="@+id/tvLocationPermissionDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_16"
+                android:drawablePadding="@dimen/dpp_16"
+                android:textColor="@color/c_888888"
+                android:textSize="@dimen/spp_11" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dpp_26"
+            android:src="@drawable/icon_user_right_back" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_1"
+        android:background="@color/f_d8d8d8" />
+
+</LinearLayout>

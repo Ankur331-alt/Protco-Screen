@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/dpp_140"
+    android:paddingEnd="@dimen/dpp_140"
+    android:background="@color/cen_main_theme_bg"
+    android:orientation="vertical">
+    <include layout="@layout/status_place_view" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_92"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/include_step_one"
+            layout="@layout/cen_connect_step_item" />
+        <include
+            android:id="@+id/include_step_two"
+            layout="@layout/cen_connect_step_item" />
+        <include
+            android:id="@+id/include_step_three"
+            layout="@layout/cen_connect_step_item" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/dpp_40"
+        android:layout_marginEnd="@dimen/dpp_40"
+        android:layout_marginTop="@dimen/dpp_58"
+        android:layout_height="match_parent" />
+</LinearLayout>

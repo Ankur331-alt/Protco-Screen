@@ -1,0 +1,21 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="@dimen/dpp_16" />
+            <solid android:color="@color/cen_family_manager_dialog_text_color" />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="@dimen/dpp_16" />
+                <gradient
+                    android:angle="0"
+                    android:endColor="@color/cen_join_family_end_gradient"
+                    android:startColor="@color/cen_join_family_start_gradient" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

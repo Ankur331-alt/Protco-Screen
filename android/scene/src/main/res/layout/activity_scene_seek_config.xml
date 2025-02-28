@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg" >
+
+    <include layout="@layout/tool_bar" />
+
+    <LinearLayout
+        android:id="@+id/viewItem"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_40"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:padding="@dimen/dpp_40"
+        android:gravity="center_vertical"
+        android:background="@drawable/shape_bg_item_10" >
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lines="1"
+            android:text="@string/rino_scene_weather_current_city"
+            android:textColor="@color/white"
+            android:textSize="@dimen/spp_28" />
+        <TextView
+            android:id="@+id/tvItemValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rino_common_city_locating"
+            android:lines="1"
+            android:textColor="@color/white_60"
+            android:textSize="@dimen/spp_28" />
+        <ImageView
+            android:layout_width="@dimen/dpp_88"
+            android:layout_height="@dimen/dpp_88"
+            android:layout_marginStart="@dimen/dpp_48"
+            android:src="@drawable/ic_arrow_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dpp_80"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:paddingStart="@dimen/dpp_48"
+        android:paddingEnd="@dimen/dpp_48"
+        android:background="@drawable/shape_bg_item_10" >
+
+        <LinearLayout
+            android:id="@+id/viewValue"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpp_48" >
+            <TextView
+                android:id="@+id/tvValue1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/dpp_32"
+                android:gravity="center"
+                android:text="@string/rino_scene_value_less_than"
+                android:textSize="@dimen/spp_24"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_item_selector" />
+            <View
+                android:layout_width="@dimen/dpp_72"
+                android:layout_height="0dp" />
+            <TextView
+                android:id="@+id/tvValue2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/dpp_32"
+                android:gravity="center"
+                android:text="@string/rino_scene_value_equal"
+                android:textSize="@dimen/spp_24"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_item_selector" />
+            <View
+                android:layout_width="@dimen/dpp_72"
+                android:layout_height="0dp" />
+            <TextView
+                android:id="@+id/tvValue3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/dpp_32"
+                android:gravity="center"
+                android:text="@string/rino_scene_value_more_than"
+                android:textSize="@dimen/spp_24"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_item_selector" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/lineValue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dpp_2"
+            android:layout_marginTop="@dimen/dpp_16"
+            android:background="@color/f_f0f0f0"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dpp_40" >
+            <TextView
+                android:id="@+id/tvSeekValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="@dimen/spp_64"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/tvSeekUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpp_10"
+                android:textSize="@dimen/spp_64"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpp_32"
+            android:layout_marginStart="@dimen/dpp_200"
+            android:layout_marginEnd="@dimen/dpp_200"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:splitTrack="false"
+            android:duplicateParentState="true"
+            android:thumb="@drawable/seek_bar_thumb"
+            android:progressDrawable="@drawable/seekbar_progress_drawable" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpp_32"
+            android:layout_marginBottom="@dimen/dpp_66"
+            android:layout_marginStart="@dimen/dpp_200"
+            android:layout_marginEnd="@dimen/dpp_200" >
+            <TextView
+                android:id="@+id/tvSeekMin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/spp_20"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/tvSeekMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/spp_20"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

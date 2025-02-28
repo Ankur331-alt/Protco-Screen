@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <View
+        android:id="@+id/viewBlank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:id="@+id/viewBottom"
+        android:orientation="vertical"
+        android:layout_width="@dimen/dpp_1400"
+        android:layout_height="@dimen/dpp_1200"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/dpp_80"
+        android:background="@color/cen_common_item_bg_color" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/rino_scene_more_title"
+            android:textSize="@dimen/spp_32"
+            android:textColor="@color/white" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dpp_80" >
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dpp_160"
+                    android:gravity="center_vertical" >
+                    <EditText
+                        android:id="@+id/etSceneName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/rino_scene_more_enter_name"
+                        android:textColorHint="@color/white_60"
+                        android:textSize="@dimen/spp_28"
+                        android:textColor="@color/white"
+                        android:singleLine="true"
+                        android:background="@null" />
+                    <ImageView
+                        android:id="@+id/ivDelete"
+                        android:layout_width="@dimen/dpp_88"
+                        android:layout_height="@dimen/dpp_88"
+                        android:src="@drawable/ic_scene_delete_input"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+<!--                <View android:id="@+id/viewLine1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/dpp_2"-->
+<!--                    android:background="@color/f_f0f0f0" />-->
+
+                <LinearLayout android:id="@+id/viewStyle"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dpp_80"
+                    android:gravity="center_vertical" >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/rino_scene_more_style_title"
+                        android:textSize="@dimen/spp_28"
+                        android:textColor="@color/white" />
+                    <RelativeLayout
+                        android:layout_width="@dimen/dpp_88"
+                        android:layout_height="@dimen/dpp_88" >
+                        <ImageView
+                            android:id="@+id/ivBgStyle"
+                            android:layout_width="@dimen/dpp_88"
+                            android:layout_height="@dimen/dpp_88"
+                            android:src="@drawable/shape_bg_eeefff_round" />
+                        <ImageView
+                            android:id="@+id/ivStyle"
+                            android:layout_width="@dimen/dpp_88"
+                            android:layout_height="@dimen/dpp_88"
+                            android:padding="@dimen/dpp_10"
+                            android:tint="@color/white" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+<!--                <View android:id="@+id/viewLine2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/dpp_2"-->
+<!--                    android:background="@color/f_f0f0f0" />-->
+
+                <LinearLayout android:id="@+id/viewIsShowHomePage"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dpp_80"
+                    android:gravity="center_vertical" >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/rino_scene_more_show_home"
+                        android:textSize="@dimen/spp_28"
+                        android:textColor="@color/white" />
+
+                    <Switch
+                        android:id="@+id/switchOp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:thumb="@drawable/select_thumb_check"
+                        android:track="@drawable/select_track_check"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+                </LinearLayout>
+
+<!--                <View android:id="@+id/viewLine3"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/dpp_2"-->
+<!--                    android:background="@color/f_f0f0f0" />-->
+
+                <LinearLayout android:id="@+id/viewEffectivePeriod"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dpp_80"
+                    android:gravity="center_vertical" >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/rino_scene_more_effective_period"
+                        android:textSize="@dimen/spp_28"
+                        android:textColor="@color/white" />
+
+                    <TextView android:id="@+id/tvEffectivePeriod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rino_scene_effective_period_allday"
+                        android:textSize="@dimen/spp_28"
+                        android:textColor="@color/white_60" />
+                    <ImageView
+                        android:layout_width="@dimen/dpp_48"
+                        android:layout_height="@dimen/dpp_24"
+                        android:layout_marginStart="@dimen/dpp_30"
+                        android:src="@drawable/ic_arrow_down" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+<!--        <View android:id="@+id/viewLine4"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dpp_2"-->
+<!--            android:background="@color/f_f0f0f0" />-->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpp_80"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvDeleteScene"
+                android:layout_width="@dimen/dpp_440"
+                android:layout_height="@dimen/dpp_128"
+                android:layout_marginEnd="@dimen/dpp_80"
+                android:background="@drawable/shape_bg_gradient_r_to_r_5"
+                android:gravity="center"
+                android:text="@string/rino_scene_delete"
+                android:textColor="@color/white"
+                android:textSize="@dimen/spp_24" />
+            <TextView
+                android:id="@+id/tvConfirm"
+                android:layout_width="@dimen/dpp_440"
+                android:layout_height="@dimen/dpp_128"
+                android:background="@drawable/shape_bg_gradient_y_to_b_5"
+                android:gravity="center"
+                android:text="@string/rino_common_confirm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/spp_24" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

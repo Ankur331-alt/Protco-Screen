@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/dpp_60"
+    android:background="@drawable/shape_bg_item_10"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dpp_80"
+        android:paddingTop="@dimen/dpp_40"
+        android:paddingEnd="@dimen/dpp_80"
+        android:paddingBottom="@dimen/dpp_40">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_30"
+                android:layout_marginBottom="@dimen/dpp_12"
+                android:text="@string/rino_user_available_wifi_list"
+                android:textColor="@color/cen_user_available_wifi_color"
+                android:textSize="@dimen/spp_24" />
+
+            <com.smart.rinoiot.common.view.MySwipeRefreshLayout
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/wifiRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dpp_24"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </com.smart.rinoiot.common.view.MySwipeRefreshLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_30"
+                android:layout_marginBottom="@dimen/dpp_12"
+                android:text="@string/rino_user_password"
+                android:textColor="@color/cen_user_available_wifi_color"
+                android:textSize="@dimen/spp_12" />
+
+            <com.smart.rinoiot.common.view.CustomEditText
+                android:id="@+id/etPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_24"
+                android:background="@drawable/shape_account_password_bg"
+                android:paddingStart="@dimen/dpp_14"
+                app:isPassword="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dpp_80"
+                android:layout_marginTop="@dimen/dpp_88"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="@dimen/dpp_220"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/dpp_40"
+                    android:background="@drawable/shape_cen_dialog_cancel"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dpp_60"
+                    android:paddingEnd="@dimen/dpp_60"
+                    android:text="@string/xpopup_cancel"
+                    android:textColor="@color/_xpopup_content_color"
+                    android:textSize="@dimen/spp_12"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/tv_confirm"
+                    android:layout_width="@dimen/dpp_220"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_cen_dialog_confirm"
+                    android:paddingStart="@dimen/dpp_140"
+                    android:paddingEnd="@dimen/dpp_140"
+                    android:text="@string/xpopup_save"
+                    android:gravity="center"
+                    android:textColor="@color/_xpopup_content_color"
+                    android:textSize="@dimen/spp_12"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

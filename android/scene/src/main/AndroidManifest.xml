@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.smart.rinoiot.scene">
+    <application>
+        <activity android:name="com.smart.rinoiot.scene.activity.CreateSceneActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="com.smart.rinoiot.scene.activity.CreateSceneActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.smart.rinoiot.scene.activity.SceneConfigActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.smart.rinoiot.scene.activity.SceneTimingActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.smart.rinoiot.scene.activity.SceneDelayActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.smart.rinoiot.scene.activity.SceneListSelectActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.smart.rinoiot.scene.activity.SceneSelectDeviceActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.smart.rinoiot.scene.activity.SceneSeekConfigActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.smart.rinoiot.scene.activity.SceneSingleConfigActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.smart.rinoiot.scene.activity.SceneMultipleConfigActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.smart.rinoiot.scene.activity.SceneEffectivePeriodActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.smart.rinoiot.scene.activity.SceneMoreActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:theme="@style/SceneMoreDialogStyle" />
+        <activity android:name="com.smart.rinoiot.scene.activity.CityActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+    </application>
+</manifest>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg" >
+
+    <include layout="@layout/tool_bar" />
+
+    <LinearLayout
+        android:id="@+id/viewOneClickExecution"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_40"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dpp_40"
+        android:background="@drawable/shape_bg_item_10" >
+        <ImageView
+            android:layout_width="@dimen/dpp_160"
+            android:layout_height="@dimen/dpp_160"
+            android:src="@drawable/ic_scene_one_click_execution" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dpp_20"
+            android:layout_marginEnd="@dimen/dpp_20" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="@string/rino_scene_manual_title"
+                android:textSize="@dimen/spp_28"
+                android:textColor="@color/white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_4"
+                android:lines="1"
+                android:text="@string/rino_scene_manual_subtitle"
+                android:textSize="@dimen/spp_22"
+                android:textColor="@color/white_60" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="@dimen/dpp_88"
+            android:layout_height="@dimen/dpp_88"
+            android:src="@drawable/ic_arrow_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_80"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:background="@drawable/shape_bg_item_10" >
+        <LinearLayout
+            android:id="@+id/viewWeatherChange"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dpp_40" >
+            <ImageView
+                android:layout_width="@dimen/dpp_160"
+                android:layout_height="@dimen/dpp_160"
+                android:src="@drawable/ic_scene_weather_change" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/dpp_20"
+                android:layout_marginEnd="@dimen/dpp_20" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="@string/rino_scene_weather_changes_title"
+                    android:textSize="@dimen/spp_28"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dpp_4"
+                    android:lines="1"
+                    android:text="@string/rino_scene_weather_changes_subtitle"
+                    android:textSize="@dimen/spp_22"
+                    android:textColor="@color/white_60" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="@dimen/dpp_88"
+                android:layout_height="@dimen/dpp_88"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dpp_2"-->
+<!--            android:layout_marginStart="@dimen/dpp_136"-->
+<!--            android:background="@color/f_f0f0f0" />-->
+        <LinearLayout
+            android:id="@+id/viewTiming"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dpp_40" >
+            <ImageView
+                android:layout_width="@dimen/dpp_160"
+                android:layout_height="@dimen/dpp_160"
+                android:src="@drawable/ic_scene_timing" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/dpp_20"
+                android:layout_marginEnd="@dimen/dpp_20" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="@string/rino_scene_timing_title"
+                    android:textSize="@dimen/spp_28"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dpp_4"
+                    android:lines="1"
+                    android:text="@string/rino_scene_timing_subtitle"
+                    android:textSize="@dimen/spp_22"
+                    android:textColor="@color/white_60" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="@dimen/dpp_88"
+                android:layout_height="@dimen/dpp_88"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dpp_2"-->
+<!--            android:layout_marginStart="@dimen/dpp_136"-->
+<!--            android:background="@color/f_f0f0f0" />-->
+        <LinearLayout
+            android:id="@+id/viewDeviceChange"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dpp_40" >
+            <ImageView
+                android:layout_width="@dimen/dpp_160"
+                android:layout_height="@dimen/dpp_160"
+                android:src="@drawable/ic_scene_device_change" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/dpp_20"
+                android:layout_marginEnd="@dimen/dpp_20" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="@string/rino_scene_device_change_title"
+                    android:textSize="@dimen/spp_28"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dpp_4"
+                    android:lines="1"
+                    android:text="@string/rino_scene_device_change_subtitle"
+                    android:textSize="@dimen/spp_22"
+                    android:textColor="@color/white_60" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="@dimen/dpp_88"
+                android:layout_height="@dimen/dpp_88"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

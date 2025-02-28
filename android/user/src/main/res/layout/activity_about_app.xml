@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpp_32"
+        android:layout_marginEnd="@dimen/dpp_32"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dpp_120"
+            android:layout_height="@dimen/dpp_120"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dpp_116"
+            android:background="@drawable/protco_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dpp_40"
+            android:text="@string/rino_mine_about_app_name"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/spp_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_old_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dpp_12"
+            android:layout_marginBottom="@dimen/dpp_100"
+            android:textColor="@color/titleColor" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dpp_1"
+            android:background="@color/c_E1E5E8" />
+    </LinearLayout>
+    <!-- 版本更新 -->
+    <include
+        android:id="@+id/includeUpdate"
+        layout="@layout/normal_item" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_1"
+        android:layout_marginStart="@dimen/dpp_32"
+        android:layout_marginEnd="@dimen/dpp_32"
+        android:visibility="gone"
+        android:background="@color/c_E1E5E8" />
+    <!-- 隐私政策 -->
+    <include
+        android:id="@+id/includePrivacy"
+        layout="@layout/normal_item" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_1"
+        android:layout_marginStart="@dimen/dpp_32"
+        android:layout_marginEnd="@dimen/dpp_32"
+        android:background="@color/c_E1E5E8" />
+    <!-- 用户协议 -->
+    <include
+        android:id="@+id/includeAgreement"
+        layout="@layout/normal_item" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpp_1"
+        android:layout_marginStart="@dimen/dpp_32"
+        android:layout_marginEnd="@dimen/dpp_32"
+        android:background="@color/c_E1E5E8" />
+</LinearLayout>

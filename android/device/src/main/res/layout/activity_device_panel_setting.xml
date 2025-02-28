@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:layout_marginStart="@dimen/dpp_30"
+        android:layout_marginEnd="@dimen/dpp_30"
+
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_60"
+                android:background="@drawable/shape_bg_item_10"
+                android:orientation="vertical"
+                android:padding="@dimen/dpp_40">
+
+                <LinearLayout
+                    android:id="@+id/llEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dpp_40"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivLogo"
+                        android:layout_width="@dimen/dpp_100"
+                        android:layout_height="@dimen/dpp_100"
+                        android:scaleType="fitXY"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dpp_30"
+                        android:layout_marginEnd="@dimen/dpp_30"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/f_f0f0f0"
+                        android:textSize="@dimen/spp_16"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivEdit"
+                        android:layout_width="@dimen/dpp_70"
+                        android:layout_height="@dimen/dpp_70"
+                        android:src="@drawable/icon_edit"
+                        app:tint="@color/f_f0f0f0"
+                        android:contentDescription="@null"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_device_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dpp_1"
+                    android:background="@color/f_f0f0f0" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dpp_46"
+                    android:gravity="center_vertical"
+                    android:text="@string/rino_device_detail_list_info"
+                    android:textColor="@color/f_f0f0f0"
+                    android:textSize="@dimen/spp_18" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dpp_30"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/deviceId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:paddingTop="@dimen/dpp_30"
+                        android:paddingBottom="@dimen/dpp_30"
+                        android:textColor="@color/f_f0f0f0"
+                        android:textSize="@dimen/spp_15" />
+
+                    <TextView
+                        android:id="@+id/copyDeviceId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/dpp_30"
+                        android:paddingEnd="0dp"
+                        android:paddingTop="@dimen/dpp_30"
+                        android:paddingBottom="@dimen/dpp_30"
+                        android:text="@string/rino_common_copy"
+                        android:textColor="@color/f_f0f0f0"
+                        android:textSize="@dimen/spp_15" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dpp_30"
+                    android:paddingBottom="@dimen/dpp_30"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:text="@string/rino_device_detail_info_signal"
+                        android:textColor="@color/f_f0f0f0"
+                        android:textSize="@dimen/spp_16" />
+                    <TextView
+                        android:id="@+id/tv_device_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:text="@string/wifi"
+                        android:textColor="@color/f_f0f0f0"
+                        android:textSize="@dimen/spp_16" />
+                    <TextView
+                        android:id="@+id/tv_signal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:layout_marginStart="@dimen/dpp_30"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:paddingStart="@dimen/dpp_10"
+                        android:paddingEnd="@dimen/dpp_10"
+                        android:paddingTop="@dimen/dpp_4"
+                        android:paddingBottom="@dimen/dpp_4"
+                        android:background="@drawable/shape_device_signal_bg"
+                        android:textColor="@color/f_f0f0f0"
+                        android:textSize="@dimen/spp_10" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/deviceIp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:paddingTop="@dimen/dpp_30"
+                    android:paddingBottom="@dimen/dpp_30"
+                    android:textColor="@color/f_f0f0f0"
+                    android:textSize="@dimen/spp_16" />
+
+                <TextView
+                    android:id="@+id/deviceZoom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:paddingTop="@dimen/dpp_30"
+                    android:paddingBottom="@dimen/dpp_30"
+                    android:textColor="@color/f_f0f0f0"
+                    android:textSize="@dimen/spp_16" />
+            </LinearLayout>
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/deviceReboot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_40"
+                android:background="@drawable/shape_bg_white_10"
+                android:drawablePadding="@dimen/dpp_10"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/dpp_40"
+                android:text="@string/rino_device_reboot"
+                android:textColor="@color/f_f0f0f0"
+                android:textSize="@dimen/spp_16"
+                android:visibility="gone"
+                app:drawableRightCompat="@drawable/icon_device_right_back" />
+            <!-- 创建群组 -->
+            <LinearLayout
+                android:id="@+id/ll_group"
+                android:layout_width="match_parent"
+                android:background="@drawable/shape_bg_item_10"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dpp_40"
+                android:padding="@dimen/dpp_40"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_group_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text="@string/rino_device_create_group"
+                    android:textColor="@color/f_f0f0f0"
+                    android:textSize="@dimen/spp_16"/>
+                <TextView
+                    android:id="@+id/tv_group_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dpp_10"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:textColor="@color/f_f0f0f0"
+                    android:textSize="@dimen/spp_14"
+                    app:drawableRightCompat="@drawable/icon_device_right_back" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_update_ota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_40"
+                android:background="@drawable/shape_bg_item_10"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dpp_40"
+                android:paddingEnd="0dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text="@string/rino_device_update"
+                    android:textColor="@color/f_f0f0f0"
+                    android:textSize="@dimen/spp_16" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dpp_1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/dpp_20"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_bg_item_10"/>
+
+                <ImageView
+                    android:id="@+id/iv_upgrade_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    android:background="@drawable/shape_device_ota_tips_bg"
+                    android:contentDescription="@null" />
+                <TextView
+                    android:id="@+id/deviceUpdateTips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dpp_6"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:lines="1"
+                    android:paddingTop="@dimen/dpp_40"
+                    android:paddingBottom="@dimen/dpp_40"
+                    android:paddingEnd="@dimen/dpp_40"
+                    android:paddingStart="0dp"
+                    android:text="@string/rino_device_latest"
+                    android:textColor="@color/f_f0f0f0"
+                    android:textSize="@dimen/spp_14" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_share"
+                android:layout_width="match_parent"
+                android:background="@drawable/shape_bg_item_10"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dpp_40"
+                android:padding="@dimen/dpp_40"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text="@string/share_device"
+                    android:textColor="@color/f_f0f0f0"
+                    android:textSize="@dimen/spp_16"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dpp_10"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:textColor="@color/f_f0f0f0"
+                    android:textSize="@dimen/spp_14"
+                    app:drawableRightCompat="@drawable/icon_device_right_back" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <TextView
+        android:id="@+id/tvDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpp_500"
+        android:layout_marginTop="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_500"
+        android:layout_marginBottom="@dimen/dpp_80"
+        android:background="@drawable/shape_bg_gradient_r_to_r_5"
+        android:gravity="center"
+        android:padding="@dimen/dpp_30"
+        android:text="@string/rino_device_detail_delete_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/spp_20" />
+</LinearLayout>

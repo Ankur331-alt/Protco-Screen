@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/tvRemoveFamily"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dpp_80"
+        android:paddingEnd="@dimen/dpp_80"
+        android:paddingTop="@dimen/dpp_40"
+        android:paddingBottom="@dimen/dpp_40">
+        <!-- 左边布局 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/dpp_80"
+            android:layout_weight="1.3"
+            android:orientation="vertical">
+            <!-- 家庭名称+家庭位置 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/familyNameView"
+                    layout="@layout/item_family_manager_info"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dpp_420"
+                    android:layout_marginEnd="@dimen/dpp_40"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/familyLocationView"
+                    layout="@layout/item_family_manager_info"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dpp_420"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <!-- 全部设备+家庭成员 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dpp_40"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/familyDeviceView"
+                    layout="@layout/item_family_info" />
+                <!-- 家庭成员列表 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dpp_40"
+                    android:background="@drawable/shape_bg_item_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvMember"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/cen_connect_step_selected_color"
+                        android:textSize="@dimen/spp_22"
+                        android:drawableRight="@drawable/icon_add_device"
+                        android:gravity="left"
+                        android:padding="@dimen/dpp_32"
+                        android:text="@string/rino_family_member_of_family" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMember"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/dpp_30"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- 房间管理列表 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dpp_20"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg_item_10"
+            android:orientation="vertical"
+            android:padding="@dimen/dpp_32">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/rino_family_room_management"
+                    android:textColor="@color/cen_connect_not_connect_color"
+                    android:textSize="@dimen/spp_22"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ivRoomManager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dpp_32"
+                    android:src="@drawable/icon_room_edit" />
+
+                <TextView
+                    android:id="@+id/tvRoomManager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dpp_32"
+                    android:text="@string/xpopup_cancel"
+                    android:textColor="@color/cen_connect_step_selected_color"
+                    android:textSize="@dimen/spp_24"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                android:id="@+id/roomManagerRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/ivAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dpp_30"
+                android:src="@drawable/icon_home_add" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRemoveFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/dpp_40"
+        android:layout_marginEnd="@dimen/dpp_40"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:background="@drawable/shape_logout_bg"
+        android:paddingStart="@dimen/dpp_530"
+        android:paddingTop="@dimen/dpp_24"
+        android:paddingEnd="@dimen/dpp_530"
+        android:paddingBottom="@dimen/dpp_24"
+        android:text="@string/rino_family_leave_family"
+        android:textColor="@color/cen_connect_step_selected_color"
+        android:textSize="@dimen/spp_24"
+        android:textStyle="bold" />
+</LinearLayout>

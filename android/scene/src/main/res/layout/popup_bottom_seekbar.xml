@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dpp_680"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/dpp_40"
+        android:paddingBottom="@dimen/dpp_16"
+        android:paddingStart="@dimen/dpp_40"
+        android:paddingEnd="@dimen/dpp_40"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/spp_15"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dpp_40"
+        android:layout_marginStart="@dimen/dpp_30"
+        android:layout_marginEnd="@dimen/dpp_30"
+        android:paddingStart="@dimen/dpp_40"
+        android:paddingEnd="@dimen/dpp_40" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dpp_40" >
+            <TextView
+                android:id="@+id/tvSeekValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="@dimen/spp_30"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/tvSeekUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpp_10"
+                android:textSize="@dimen/spp_14"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpp_24"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:splitTrack="false"
+            android:duplicateParentState="true"
+            android:thumb="@drawable/seek_bar_thumb"
+            android:progressDrawable="@drawable/seekbar_progress_drawable" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dpp_20"
+            android:layout_marginBottom="@dimen/dpp_40" >
+            <TextView
+                android:id="@+id/tvSeekMin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/spp_12"
+                android:textColor="@color/white_60" />
+            <TextView
+                android:id="@+id/tvSeekMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/spp_12"
+                android:textColor="@color/white_60" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_60"
+        android:layout_marginBottom="@dimen/dpp_80"
+        android:layout_marginStart="@dimen/dpp_40"
+        android:layout_marginEnd="@dimen/dpp_40" >
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dpp_100"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/rino_common_cancel"
+            android:textSize="@dimen/spp_16"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_bg_stroke_2ce69b_5" />
+        <View
+            android:layout_width="@dimen/dpp_40"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dpp_100"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/rino_common_save"
+            android:textSize="@dimen/spp_16"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_bg_gradient_y_to_b_5" />
+    </LinearLayout>
+</LinearLayout>

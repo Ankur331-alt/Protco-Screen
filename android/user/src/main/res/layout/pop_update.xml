@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_update_bg"
+    android:gravity="center"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:src="@drawable/xupdate_bg_app_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dpp_30"
+            android:layout_marginTop="@dimen/dpp_30"
+            android:layout_marginRight="@dimen/dpp_30"
+            android:gravity="center"
+            android:textColor="@color/cen_connect_step_selected_color"
+            android:textSize="@dimen/spp_28"
+            android:textStyle="bold" />
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dpp_150"
+            android:layout_margin="@dimen/dpp_30"
+            android:scrollbars="none">
+
+            <TextView
+                android:id="@+id/tvDes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/cen_connect_not_connect_color"
+                android:textSize="@dimen/spp_26" />
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dpp_30"
+            android:layout_marginLeft="@dimen/dpp_30"
+            android:layout_marginTop="@dimen/dpp_20"
+            android:progressDrawable="@drawable/shape_device_number_progress_bg"
+            android:background="@color/_xpopup_confirm_start"
+            android:layout_marginRight="@dimen/dpp_30"
+            android:layout_marginBottom="@dimen/dpp_40"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/viewHorizon"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dpp_2"
+            android:visibility="gone"
+            android:background="@color/c_E1E5E8" />
+
+        <LinearLayout
+            android:id="@+id/ll_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dpp_40"
+            android:layout_marginTop="20dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_cen_dialog_cancel"
+                android:gravity="center"
+                android:paddingStart="60dp"
+                android:paddingEnd="60dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/rino_common_cancel"
+                android:textStyle="bold"
+                android:layout_marginEnd="30dp"
+                android:textColor="@color/_xpopup_content_color"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/btnUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_cen_dialog_confirm"
+                android:gravity="center"
+                android:paddingStart="60dp"
+                android:paddingEnd="60dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/_xpopup_content_color"
+                android:text="@string/rino_common_update"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_theme_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="@dimen/dpp_32"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_group_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/rino_device_create_group"
+                android:textColor="@color/f_454545"
+                android:textSize="@dimen/spp_24" />
+
+            <TextView
+                android:id="@+id/tv_group_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_8"
+                android:gravity="center"
+                android:text="@string/rino_device_create_group_desc"
+                android:textColor="@color/c_A5A5A5"
+                android:textSize="@dimen/spp_16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/groupAddedRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_32"
+                android:layout_marginBottom="@dimen/dpp_56"
+                android:background="@drawable/shape_bg_white_10"
+                android:scrollbars="none" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_8"
+                android:text="@string/rino_device_activator_to_be_add_device"
+                android:textColor="@color/c_A5A5A5"
+                android:textSize="@dimen/spp_16" />
+            <!--  没有未添加的设备  -->
+            <RelativeLayout
+                android:id="@+id/ll_not_add_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/rl_penied"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:paddingStart="@dimen/dpp_60"
+                    android:paddingTop="@dimen/dpp_32"
+                    android:paddingEnd="@dimen/dpp_60"
+                    android:paddingBottom="@dimen/dpp_32">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/icon_scene_denied_empty" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_penied"
+                    android:layout_alignStart="@id/rl_penied"
+                    android:layout_alignEnd="@id/rl_penied"
+                    android:gravity="center"
+                    android:text="@string/rino_device_create_group_condition_tips"
+                    android:textColor="@color/c_666666"
+                    android:textSize="@dimen/spp_14" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/groupNotAddedRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_24"
+                android:layout_marginBottom="@dimen/dpp_30"
+                android:visibility="gone"
+                android:background="@drawable/shape_bg_white_10"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.smart.device">
+
+    <application>
+        <activity
+            android:name=".activity.DeviceManagerActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activity.DevicePanelSettingActivity"
+            android:screenOrientation="landscape"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.smart.device.activity.DevicePanelSettingActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.DeviceCommissioningMethodActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".activity.DeviceAutomaticCommissioningActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".activity.ShareDeviceActivity"
+            android:screenOrientation="landscape"
+            android:exported="true" />
+        <activity
+            android:name=".activity.DevicePanelRenameActivity"
+            android:screenOrientation="landscape"
+            android:exported="true" />
+        <activity
+            android:name=".activity.DeviceOTAUpgradeActivity"
+            android:screenOrientation="landscape"
+            android:exported="true" />
+        <activity
+            android:name="com.smart.group.activity.CreateGroupActivity"
+            android:screenOrientation="landscape"
+            android:exported="true" />
+    </application>
+</manifest>

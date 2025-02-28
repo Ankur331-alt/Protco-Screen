@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="239dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/shape_favorite_device_off_bg">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/iv_device_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:contentDescription="@null"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                />
+            <ImageView
+                android:id="@+id/iv_device_switch_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_device_switch_status_on"
+                android:contentDescription="@null"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_device_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rino_com_default_device_name"
+                android:textSize="24sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/tv_device_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/cen_connect_not_connect_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_seek_bars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="17dp"
+            android:visibility="gone"
+            >
+            <SeekBar
+                android:id="@+id/sb_brightness"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:splitTrack="false"
+                android:min="1"
+                android:max="100"
+                android:duplicateParentState="true"
+                android:paddingHorizontal="20dp"
+                android:thumb="@drawable/shape_seekbar_pill_thumb"
+                android:progressDrawable="@drawable/shape_brightness_seekbar_bg" />
+
+            <SeekBar
+                android:id="@+id/sb_color_temperature"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:splitTrack="false"
+                android:duplicateParentState="true"
+                android:min="1"
+                android:max="100"
+                android:layout_marginTop="11dp"
+                android:paddingHorizontal="20dp"
+                android:thumbOffset="2dp"
+                android:thumb="@drawable/shape_color_temp_seekbar_circular_thumb"
+                android:progressDrawable="@drawable/shape_color_temperature_seekbar_bg" />
+
+            <SeekBar
+                android:id="@+id/sb_color"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:splitTrack="false"
+                android:duplicateParentState="true"
+                android:progress="0"
+                android:max="360"
+                android:min="0"
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="13dp"
+                android:thumbOffset="2dp"
+                android:thumb="@drawable/shape_color_seekbar_circular_thumb"
+                android:progressDrawable="@drawable/shape_favorite_color_seekbar_bg" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

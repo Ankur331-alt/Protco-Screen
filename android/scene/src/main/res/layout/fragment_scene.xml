@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/llWeather"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ic_home_banner_bg"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="48dp"
+                android:layout_marginBottom="5dp"
+                >
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="50sp"
+                    android:text="@string/rino_com_default_time_value"
+                    android:textColor="@color/cen_connect_step_selected_color"/>
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:text="@string/rino_com_default_date_value"
+                    android:textColor="@color/cen_connect_not_connect_color"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="90dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/iv_weather_condition"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_weather_condition_clear"
+                    android:contentDescription="@null"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_current_temperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rino_com_default_temperature_value"
+                        android:textSize="46sp"
+                        android:textColor="@color/white"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginEnd="30dp"
+                            tools:ignore="UseCompoundDrawables">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_weather_current_wind_speed"
+                                android:layout_marginEnd="8dp"
+                                android:contentDescription="@null"
+                                />
+                            <TextView
+                                android:id="@+id/tv_current_wind_speed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="@string/rino_com_default_wind_speed_value"
+                                android:textSize="26sp"
+                                android:textColor="@color/cen_connect_not_connect_color" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginEnd="30dp"
+                            tools:ignore="UseCompoundDrawables">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_weather_current_humidity"
+                                android:layout_marginEnd="8dp"
+                                android:contentDescription="@null"/>
+                            <TextView
+                                android:id="@+id/tv_current_humidity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="@string/rino_com_default_humidity_value"
+                                android:textSize="26sp"
+                                android:textColor="@color/cen_connect_not_connect_color"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginEnd="30dp"
+                            tools:ignore="UseCompoundDrawables">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@null"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/ic_weather_current_air_quality"
+                                />
+                            <TextView
+                                android:id="@+id/tv_current_air_quality"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="@string/rino_com_default_air_quality_value"
+                                android:textSize="26sp"
+                                android:textColor="@color/cen_connect_not_connect_color"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="25dp"
+            >
+
+            <LinearLayout
+                android:layout_width="256dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_secondary_container_bg"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/tv_no_devices_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No distributed"
+                    android:textSize="24sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:visibility="visible"
+                    android:textColor="@color/cen_connect_not_connect_color"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <LinearLayout
+                        android:id="@+id/ll_add_room_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/shape_tertiary_btn_bg"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:layout_marginHorizontal="20dp"
+                        android:paddingVertical="18dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@null"
+                            android:src="@drawable/ic_plus_gradient" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="@string/rino_scene_add_room"
+                            android:textColor="#08FEFD"
+                            android:textSize="22sp" />
+                    </LinearLayout>
+
+                    <com.smart.rinoiot.scene.view.WheelPicker
+                        android:id="@+id/wp_rooms"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        app:itemTextColor="@color/cen_connect_not_connect_color"
+                        app:selectedTextColor="@color/white"
+                        app:selectedTextSize="24sp"
+                        app:itemTextSize="24sp"
+                        app:itemWidthSpace="40dp"
+                        app:wheelCurtain="true"
+                        android:visibility="gone"
+                        app:wheelCurtainBorder="false"
+                        app:wheelCyclic="true"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_rooms"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:orientation="vertical"
+                android:background="@drawable/shape_secondary_container_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/rino_scene_my_favorites"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+                    <ImageView
+                        android:id="@+id/iv_favorite_devices"
+                        android:layout_width="280dp"
+                        android:layout_height="280dp"
+                        android:src="@drawable/ic_favorite_devices"
+                        android:visibility="visible"
+                        android:contentDescription="@null"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_favorite_devices"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="40dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <net.lucode.hackware.magicindicator.MagicIndicator
+                    android:id="@+id/magic_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/ivAdd"
+                    android:layout_width="@dimen/dpp_90"
+                    android:layout_height="@dimen/dpp_90"
+                    android:layout_marginStart="@dimen/dpp_40"
+                    android:padding="@dimen/dpp_10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_more" />
+            </LinearLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_marginTop="15dp"
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

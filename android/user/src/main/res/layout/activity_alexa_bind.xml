@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dpp_100"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:padding="@dimen/dpp_40"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_bind_alexa" />
+
+            <TextView
+                android:id="@+id/tv_alexa_bind_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_40"
+                android:layout_marginBottom="@dimen/dpp_80"
+                android:gravity="center"
+                android:text="@string/rino_voice_unbind_alexa"
+                android:textColor="@color/c_070707"
+                android:textSize="@dimen/spp_22"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dpp_16"
+                android:text="@string/rino_voice_bind_alexa_describe"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/spp_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dpp_10"
+                android:text="@string/rino_voice_eg"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/spp_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dpp_40"
+                android:text="@string/rino_mine_voice_eg"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/spp_14" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 绑定、绑定指引、解绑 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dpp_30"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_bind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dpp_60"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="@dimen/dpp_40">
+
+            <TextView
+                android:id="@+id/tvOneClickVerify"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dpp_100"
+                android:layout_marginBottom="@dimen/dpp_40"
+                android:background="@drawable/shape_btn_bg_22252b_8"
+                android:gravity="center"
+                android:text="@string/rino_voice_auth"
+                android:textColor="@color/white"
+                android:textSize="@dimen/spp_15" />
+
+            <TextView
+                android:id="@+id/tvManualBindGuide"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dpp_100"
+                android:gravity="center"
+                android:text="@string/rino_voice_guide"
+                android:textColor="@color/main_theme_color"
+                android:textSize="@dimen/spp_14" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvManualUnBind"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dpp_100"
+            android:layout_marginStart="@dimen/dpp_100"
+            android:layout_marginEnd="@dimen/dpp_100"
+            android:layout_marginBottom="@dimen/dpp_270"
+            android:background="@drawable/shape_btn_bg_eeeff2_8"
+            android:gravity="center"
+            android:text="@string/rino_voice_unbind"
+            android:textColor="@color/f_454545"
+            android:textSize="@dimen/spp_17"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

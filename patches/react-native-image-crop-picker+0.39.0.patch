@@ -1,0 +1,74 @@
+diff --git a/node_modules/react-native-image-crop-picker/android/build.gradle b/node_modules/react-native-image-crop-picker/android/build.gradle
+index 48443cc..127f4b2 100644
+--- a/node_modules/react-native-image-crop-picker/android/build.gradle
++++ b/node_modules/react-native-image-crop-picker/android/build.gradle
+@@ -1,15 +1,15 @@
+ apply plugin: 'com.android.library'
+ 
+-def DEFAULT_COMPILE_SDK_VERSION   = 30
+-def DEFAULT_BUILD_TOOLS_VERSION   = "29.0.3"
+-def DEFAULT_TARGET_SDK_VERSION    = 30
+-def DEFAULT_MIN_SDK_VERSION       = 16
++def DEFAULT_COMPILE_SDK_VERSION = 30
++def DEFAULT_BUILD_TOOLS_VERSION = "29.0.3"
++def DEFAULT_TARGET_SDK_VERSION = 30
++def DEFAULT_MIN_SDK_VERSION = 16
+ 
+ android {
+-        compileSdkVersion rootProject.hasProperty('compileSdkVersion') ? rootProject.compileSdkVersion : DEFAULT_COMPILE_SDK_VERSION
+-        buildToolsVersion rootProject.hasProperty('buildToolsVersion') ? rootProject.buildToolsVersion : DEFAULT_BUILD_TOOLS_VERSION
++    compileSdkVersion rootProject.hasProperty('compileSdkVersion') ? rootProject.compileSdkVersion : DEFAULT_COMPILE_SDK_VERSION
++    buildToolsVersion rootProject.hasProperty('buildToolsVersion') ? rootProject.buildToolsVersion : DEFAULT_BUILD_TOOLS_VERSION
+ 
+-  defaultConfig {
++    defaultConfig {
+         minSdkVersion rootProject.hasProperty('minSdkVersion') ? rootProject.minSdkVersion : DEFAULT_MIN_SDK_VERSION
+         targetSdkVersion rootProject.hasProperty('targetSdkVersion') ? rootProject.targetSdkVersion : DEFAULT_TARGET_SDK_VERSION
+         versionCode 1
+@@ -22,5 +22,6 @@ android {
+ dependencies {
+     implementation 'com.facebook.react:react-native:+'
+     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+-    implementation 'com.github.yalantis:ucrop:2.2.6-native'
++//    implementation 'com.github.yalantis:ucrop:2.2.6-native'
++    implementation 'io.github.lucksiege:pictureselector:v2.7.3-rc06'
+ }
+diff --git a/node_modules/react-native-image-crop-picker/android/src/main/AndroidManifest.xml b/node_modules/react-native-image-crop-picker/android/src/main/AndroidManifest.xml
+index c356fde..e830257 100644
+--- a/node_modules/react-native-image-crop-picker/android/src/main/AndroidManifest.xml
++++ b/node_modules/react-native-image-crop-picker/android/src/main/AndroidManifest.xml
+@@ -21,9 +21,9 @@
+                 android:resource="@xml/ivpusic_imagepicker_provider_paths" />
+         </provider>
+ 
+-        <activity
+-            android:name="com.yalantis.ucrop.UCropActivity"
+-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
++<!--        <activity-->
++<!--            android:name="com.yalantis.ucrop.UCropActivity"-->
++<!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />-->
+     </application>
+ 
+ </manifest>
+diff --git a/node_modules/react-native-image-crop-picker/android/src/main/java/com/reactnative/ivpusic/imagepicker/PickerModule.java b/node_modules/react-native-image-crop-picker/android/src/main/java/com/reactnative/ivpusic/imagepicker/PickerModule.java
+index 248f06b..7960517 100644
+--- a/node_modules/react-native-image-crop-picker/android/src/main/java/com/reactnative/ivpusic/imagepicker/PickerModule.java
++++ b/node_modules/react-native-image-crop-picker/android/src/main/java/com/reactnative/ivpusic/imagepicker/PickerModule.java
+@@ -403,7 +403,7 @@ class PickerModule extends ReactContextBaseJavaModule implements ActivityEventLi
+         setConfiguration(options);
+         resultCollector.setup(promise, multiple);
+ 
+-        permissionsCheck(activity, promise, Collections.singletonList(Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU ? Manifest.permission.WRITE_EXTERNAL_STORAGE : Manifest.permission.READ_MEDIA_IMAGES), new Callable<Void>() {
++        permissionsCheck(activity, promise, Collections.singletonList(Build.VERSION.SDK_INT < 33  ? Manifest.permission.WRITE_EXTERNAL_STORAGE : "android.permission.READ_MEDIA_IMAGES"), new Callable<Void>() {
+             @Override
+             public Void call() {
+                 initiatePicker(activity);
+@@ -762,7 +762,7 @@ class PickerModule extends ReactContextBaseJavaModule implements ActivityEventLi
+             uCrop.withAspectRatio(width, height);
+         }
+ 
+-        uCrop.start(activity);
++        uCrop.start(activity,UCrop.REQUEST_CROP);
+     }
+ 
+     private void imagePickerResult(Activity activity, final int requestCode, final int resultCode, final Intent data) {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--选择状态下的图片-->
+
+    <!--未选择状态下的图片-->
+    <item android:drawable="@drawable/shape_bg_alpha_black_10"  android:state_selected="false" />
+
+
+    <item android:drawable="@drawable/shape_bg_black_10"  android:state_selected="true" />
+</selector>

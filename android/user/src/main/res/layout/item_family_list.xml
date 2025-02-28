@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/icon_edit_family">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/tv12SpTopStyle"
+        android:layout_alignParentLeft="true"
+        android:padding="@dimen/dpp_20"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon_room_add"
+        android:visibility="gone" />
+</RelativeLayout>

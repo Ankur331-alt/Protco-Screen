@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rino_family_room_management">Room Management</string>
+    <string name="rino_family_room_management_title">Family room management</string>
+    <string name="rino_family_device_count">%1s Device</string>
+    <string name="rino_family_equipment">Equipment not in this room</string>
+    <string name="rino_family_name">Family Name</string>
+    <string name="rino_family_member_of_family">member of family</string>
+    <string name="rino_family_add_matter_device">Matter Device Config</string>
+</resources>

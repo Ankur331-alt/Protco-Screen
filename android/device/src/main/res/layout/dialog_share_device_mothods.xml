@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="1000dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/shape_share_device_methods_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="30dp"
+            android:ellipsize="end"
+            android:maxWidth="550dp"
+            android:maxLines="1"
+            android:text="@string/share_with_apps"
+            android:textColor="@color/c_F7F7FA"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tv_share_device_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="760dp"
+            android:textAlignment="center"
+            android:textColor="@color/c_696969"
+            android:text="@string/share_device_method_hint"
+            android:textSize="24sp"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_share_methods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="72dp"
+            android:layout_marginBottom="63dp"
+            >
+            <LinearLayout
+                android:id="@+id/ll_pairing_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:id="@+id/iv_use_pin_code"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_marginBottom="26dp"
+                    android:src="@drawable/ic_pin_code"
+                    android:contentDescription="@string/using_pairing_code"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="150dp"
+                    android:textColor="@color/c_696969"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:text="@string/using_pairing_code"
+                    android:textSize="22sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_qr_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/iv_use_qr_code"
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_marginBottom="26dp"
+                    android:src="@drawable/ic_qr_code"
+                    android:contentDescription="@string/using_qr_code" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="150dp"
+                    android:gravity="center"
+                    android:textColor="@color/c_696969"
+                    android:textAlignment="center"
+                    android:text="@string/using_qr_code"
+                    android:textSize="22sp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="220dp"
+            android:layout_height="64dp"
+            android:background="@drawable/shape_share_device_methods_button_outline"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            android:text="@string/share_device_cancel"
+            android:textSize="24sp"
+            android:layout_marginBottom="63dp"
+            android:textColor="@color/c_F7F7FA">
+        </Button>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

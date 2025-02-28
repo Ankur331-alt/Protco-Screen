@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cen_main_theme_bg" >
+
+    <include layout="@layout/tool_bar" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_40"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:gravity="center_vertical" >
+        <TextView
+            android:id="@+id/tvSceneTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lines="1"
+            android:text="@string/rino_scene_manual_title_new"
+            android:textSize="@dimen/spp_32"
+            android:textColor="@color/white" />
+        <ImageView
+            android:id="@+id/ivSceneMore"
+            android:layout_width="@dimen/dpp_78"
+            android:layout_height="@dimen/dpp_78"
+            android:padding="@dimen/dpp_10"
+            android:src="@drawable/ic_scene_more" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSceneEffectiveTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_4"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:lines="1"
+        android:text="@string/rino_scene_effective_period_allday"
+        android:textSize="@dimen/spp_24"
+        android:textColor="@color/white_60"
+        android:visibility="gone" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/dpp_40"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dpp_80"
+                android:background="@drawable/shape_bg_item_10" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dpp_80"
+                    android:layout_marginEnd="@dimen/dpp_80"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rino_scene_condition_section_title"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/spp_28" />
+                        <TextView
+                            android:id="@+id/tvMeetTheConditions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dpp_10"
+                            android:text="@string/rino_scene_condition_section_sub_title1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/spp_22" />
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/ivAddCondition"
+                        android:layout_width="@dimen/dpp_88"
+                        android:layout_height="@dimen/dpp_88"
+                        android:src="@drawable/ic_more" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                        android:id="@+id/recyclerViewCondition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dpp_80"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/viewAddCondition"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dpp_40"
+                    android:paddingBottom="@dimen/dpp_40"
+                    android:layout_marginStart="@dimen/dpp_80"
+                    android:layout_marginEnd="@dimen/dpp_80"
+                    android:layout_marginBottom="@dimen/dpp_80"
+                    android:gravity="center"
+                    android:background="@drawable/shape_bg_333_10" >
+                    <ImageView
+                        android:layout_width="@dimen/dpp_56"
+                        android:layout_height="@dimen/dpp_56"
+                        android:src="@drawable/ic_scene_add" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dpp_40"
+                        android:text="@string/rino_scene_add_condition_title"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/spp_20" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dpp_80"
+                android:paddingTop="@dimen/dpp_80"
+                android:background="@drawable/shape_bg_item_10" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dpp_80"
+                    android:layout_marginEnd="@dimen/dpp_80"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/rino_scene_task_section_title"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/spp_28" />
+                    <ImageView
+                        android:id="@+id/ivAddTask"
+                        android:layout_width="@dimen/dpp_88"
+                        android:layout_height="@dimen/dpp_88"
+                        android:src="@drawable/ic_more" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                        android:id="@+id/recyclerViewTask"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dpp_80"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/viewAddTask"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dpp_80"
+                    android:layout_marginEnd="@dimen/dpp_80"
+                    android:layout_marginBottom="@dimen/dpp_80"
+                    android:paddingTop="@dimen/dpp_40"
+                    android:paddingBottom="@dimen/dpp_40"
+                    android:gravity="center"
+                    android:background="@drawable/shape_bg_333_10" >
+                    <ImageView
+                        android:layout_width="@dimen/dpp_56"
+                        android:layout_height="@dimen/dpp_56"
+                        android:src="@drawable/ic_scene_add" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dpp_40"
+                        android:text="@string/rino_scene_add_task_title"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/spp_20" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tvSave"
+        android:layout_width="@dimen/dpp_560"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpp_80"
+        android:layout_marginEnd="@dimen/dpp_80"
+        android:layout_marginTop="@dimen/dpp_80"
+        android:layout_marginBottom="@dimen/dpp_80"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_bg_gradient_y_to_b_5"
+        android:gravity="center"
+        android:paddingTop="@dimen/dpp_40"
+        android:paddingBottom="@dimen/dpp_40"
+        android:text="@string/rino_common_save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/spp_24"/>
+</LinearLayout>

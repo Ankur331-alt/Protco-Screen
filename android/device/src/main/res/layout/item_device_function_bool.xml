@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivFunctionSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="@dimen/dpp_16"
+        android:src="@drawable/update_switch_selector" />
+
+    <TextView
+        android:id="@+id/tvSwitchName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dpp_6"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/cen_connect_step_selected_color"
+        android:textSize="@dimen/spp_10" />
+
+</LinearLayout>
