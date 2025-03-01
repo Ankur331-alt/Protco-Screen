@@ -19,7 +19,7 @@
             android:layout_height="@dimen/dpp_120"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/dpp_116"
-            android:background="@drawable/app_logo" />
+            android:background="@drawable/protco_logo" />
 
         <TextView
             android:layout_width="wrap_content"

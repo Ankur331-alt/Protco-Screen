@@ -5,6 +5,7 @@ plugins {
 android {
     compileSdkVersion 33
 
+
     defaultConfig {
         minSdkVersion 26
         targetSdkVersion 33
@@ -12,11 +13,11 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
 
-        buildConfigField "String", "IFT_APP_ID", "\"${ift_app_id}\""
-        buildConfigField "String", "IFT_APP_KEY", "\"${ift_app_key}\""
-        buildConfigField "String", "OPENAI_API_KEY", "\"${openai_api_key}\""
-        buildConfigField "String", "OPENAI_API_HOST", "\"${openai_api_host}\""
-        buildConfigField "String", "AI_TOOLS_API_KEY", "\"${ai_tools_api_key}\""
+        buildConfigField "String", "IFT_APP_ID", "\"ift_app_id\""
+        buildConfigField "String", "IFT_APP_KEY", "\"ift_app_key\""
+        buildConfigField "String", "OPENAI_API_KEY", "\"openai_api_key\""
+        buildConfigField "String", "OPENAI_API_HOST", "\"openai_api_host\""
+        buildConfigField "String", "AI_TOOLS_API_KEY", "\"ai_tools_api_key\""
     }
 
     buildTypes {
