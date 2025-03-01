@@ -41,7 +41,7 @@
         <com.gjiazhe.wavesidebar.WaveSideBar
             android:id="@+id/side_bar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="618dp"
             android:paddingRight="@dimen/dpp_36"
             app:sidebar_lazy_respond="false"
             app:sidebar_max_offset="@dimen/dpp_60"

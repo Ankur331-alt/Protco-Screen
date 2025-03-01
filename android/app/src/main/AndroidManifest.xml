@@ -55,7 +55,7 @@
         android:name=".App"
         android:allowBackup="true"
         android:icon="@drawable/app_logo"
-        android:label="Protco New"
+        android:label="Protco Screen"
         android:maxAspectRatio="2.4"
         android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="true"
